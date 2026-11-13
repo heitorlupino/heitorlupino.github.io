@@ -336,11 +336,13 @@ const projetos = [
 
 
 // COMO ADICIONAR UM CERTIFICADO:
+// categoria: "faculdade", "extensao" ou "cursos"
 // coloca a imagem (e o PDF, se tiver) na pasta assets/certificados
 // e escreve o caminho em "imagem" e "pdf" (se não tiver ainda deixa "")
 const certificados = [
   {
     nome: "Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes",
+    categoria: "cursos",
     instituicao: "DIO - Bradesco",
     data: "Junho de 2026 - 2 horas",
     imagem: "assets/certificados/fundamentos-ia-moderna.jpg",
@@ -348,6 +350,7 @@ const certificados = [
   },
   {
     nome: "V Semana das Engenharias",
+    categoria: "faculdade",
     instituicao: "UNISAGRADO",
     data: "Abril de 2026 - 3 horas",
     imagem: "assets/certificados/semana-engenharias-2026.jpg",
@@ -355,6 +358,7 @@ const certificados = [
   },
   {
     nome: "VII SITec - Semana de Inovação e Tecnologia (inclui minicurso de automação com LLM, RPA e OCR)",
+    categoria: "faculdade",
     instituicao: "UNISAGRADO",
     data: "Novembro de 2025 - 9 horas",
     imagem: "assets/certificados/sitec-2025.jpg",
@@ -362,6 +366,7 @@ const certificados = [
   },
   {
     nome: "Projeto de Extensão Fábrica de Software: Websites, Aplicativos e Jogos",
+    categoria: "extensao",
     instituicao: "UNISAGRADO",
     data: "1º semestre de 2025 - 150 horas",
     imagem: "assets/certificados/fabrica-software-2025.jpg",
@@ -369,6 +374,7 @@ const certificados = [
   },
   {
     nome: "React na Prática - Construindo uma Tela do Zero",
+    categoria: "faculdade",
     instituicao: "UNISAGRADO",
     data: "Maio de 2025 - 8 horas",
     imagem: "assets/certificados/react-na-pratica-2025.jpg",
@@ -376,6 +382,7 @@ const certificados = [
   },
   {
     nome: "VI SITec - Semana de Inovação e Tecnologia (inclui minicurso de chat com WebSocket, Node.js e Angular)",
+    categoria: "faculdade",
     instituicao: "UNISAGRADO",
     data: "Novembro de 2024 - 7 horas",
     imagem: "assets/certificados/sitec-2024.jpg",
@@ -383,6 +390,7 @@ const certificados = [
   },
   {
     nome: "XIII Encontro e III Mostra de Extensão",
+    categoria: "extensao",
     instituicao: "UNISAGRADO",
     data: "Outubro de 2024 - 1 hora",
     imagem: "assets/certificados/mostra-extensao-2024.jpg",
@@ -390,6 +398,7 @@ const certificados = [
   },
   {
     nome: "Introdução ao Figma",
+    categoria: "faculdade",
     instituicao: "UNISAGRADO",
     data: "Setembro de 2024 - 8 horas",
     imagem: "assets/certificados/introducao-figma-2024.jpg",
@@ -397,6 +406,7 @@ const certificados = [
   },
   {
     nome: "Projeto de Extensão Fábrica de Software: Websites, Aplicativos e Jogos",
+    categoria: "extensao",
     instituicao: "UNISAGRADO",
     data: "1º semestre de 2024 - 35 horas",
     imagem: "assets/certificados/fabrica-software-2024.jpg",
@@ -404,6 +414,7 @@ const certificados = [
   },
   {
     nome: "Introdução à Unity: produzindo um jogo do zero",
+    categoria: "faculdade",
     instituicao: "UNISAGRADO",
     data: "Abril de 2024 - 4 horas",
     imagem: "assets/certificados/introducao-unity-2024.jpg",
@@ -411,6 +422,7 @@ const certificados = [
   },
   {
     nome: "Bootcamp Bradesco - GenAI, Dados & Cibersegurança",
+    categoria: "cursos",
     instituicao: "DIO - Bradesco",
     data: "Em andamento",
     imagem: "",
@@ -418,6 +430,7 @@ const certificados = [
   },
   {
     nome: "Python Impressionador",
+    categoria: "cursos",
     instituicao: "Hashtag Treinamentos",
     data: "Em andamento",
     imagem: "",
@@ -425,6 +438,7 @@ const certificados = [
   },
   {
     nome: "Construa seu primeiro app com IA",
+    categoria: "cursos",
     instituicao: "DIO - Santander",
     data: "Em andamento",
     imagem: "",
@@ -432,6 +446,7 @@ const certificados = [
   },
   {
     nome: "Formação Front-end - HTML, CSS, JavaScript, React e TypeScript",
+    categoria: "cursos",
     instituicao: "Matheus Battisti",
     data: "Em andamento",
     imagem: "",

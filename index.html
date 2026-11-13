@@ -15,7 +15,7 @@
   <!-- icones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/style.css?v=7">
 </head>
 <body>
 
@@ -250,10 +250,10 @@
         <p class="section-desc">Alguns projetos que fiz na faculdade e nos estudos.</p>
 
         <div class="filters">
-          <button class="filter-btn active" data-filter="todos">Todos</button>
-          <button class="filter-btn" data-filter="dados">Dados & IA</button>
-          <button class="filter-btn" data-filter="jogos">Jogos</button>
-          <button class="filter-btn" data-filter="outros">Outros</button>
+          <button class="filter-btn proj-filter active" data-filter="todos">Todos</button>
+          <button class="filter-btn proj-filter" data-filter="dados">Dados & IA</button>
+          <button class="filter-btn proj-filter" data-filter="jogos">Jogos</button>
+          <button class="filter-btn proj-filter" data-filter="outros">Outros</button>
         </div>
 
         <!-- os cards sao criados pelo js/script.js (lista "projetos") -->
@@ -307,6 +307,14 @@
         <h2 class="section-title"><span class="green">05.</span> Certificados</h2>
         <p class="section-desc">Cursos e certificados que concluí ou estou fazendo.</p>
 
+        <div class="filters">
+          <button class="filter-btn cert-filter active" data-filter="todos">Todos</button>
+          <button class="filter-btn cert-filter" data-filter="faculdade">Faculdade</button>
+          <button class="filter-btn cert-filter" data-filter="extensao">Extensão</button>
+          <button class="filter-btn cert-filter" data-filter="cursos">Cursos online</button>
+          <button class="filter-btn cert-filter" data-filter="andamento">Em andamento</button>
+        </div>
+
         <!-- os cards sao criados pelo js/script.js (lista "certificados") -->
         <div class="certs-grid" id="certs-grid"></div>
       </div>
@@ -355,7 +363,7 @@
     </div>
   </div>
 
-  <script src="js/dados.js?v=6"></script>
-  <script src="js/script.js?v=6"></script>
+  <script src="js/dados.js?v=7"></script>
+  <script src="js/script.js?v=7"></script>
 </body>
 </html>

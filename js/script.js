@@ -44,7 +44,7 @@ function mostrarProjetos(filtro) {
 mostrarProjetos("todos");
 
 // botoes de filtro
-const filterBtns = document.querySelectorAll(".filter-btn");
+const filterBtns = document.querySelectorAll(".proj-filter");
 
 filterBtns.forEach(function (btn) {
   btn.addEventListener("click", function () {
@@ -62,25 +62,52 @@ filterBtns.forEach(function (btn) {
 // ==========================================
 const certsGrid = document.getElementById("certs-grid");
 
-certificados.forEach(function (cert, index) {
-  let foto = "";
-  let botao = "";
-  if (cert.imagem !== "") {
-    foto = `<img src="${cert.imagem}" alt="${cert.nome}" class="cert-thumb" onclick="abrirCertificado(${index})">`;
-    botao = `<button class="cert-btn" onclick="abrirCertificado(${index})">Ver certificado</button>`;
-  } else {
-    foto = `<div class="cert-thumb cert-thumb-vazio"><i class="fa-solid fa-award"></i></div>`;
-  }
+function mostrarCertificados(filtro) {
+  certsGrid.innerHTML = "";
 
-  certsGrid.innerHTML += `
-    <div class="cert-card">
-      ${foto}
-      <h3>${cert.nome}</h3>
-      <span class="cert-inst">${cert.instituicao}</span>
-      <span class="cert-info">${cert.data}</span>
-      ${botao}
-    </div>
-  `;
+  certificados.forEach(function (cert, index) {
+    // "Em andamento" é um filtro especial (não é categoria)
+    if (filtro === "andamento" && cert.data !== "Em andamento") {
+      return;
+    }
+    if (filtro !== "todos" && filtro !== "andamento" && cert.categoria !== filtro) {
+      return;
+    }
+
+    let foto = "";
+    let botao = "";
+    if (cert.imagem !== "") {
+      foto = `<img src="${cert.imagem}" alt="${cert.nome}" class="cert-thumb" onclick="abrirCertificado(${index})">`;
+      botao = `<button class="cert-btn" onclick="abrirCertificado(${index})">Ver certificado</button>`;
+    } else {
+      foto = `<div class="cert-thumb cert-thumb-vazio"><i class="fa-solid fa-award"></i></div>`;
+    }
+
+    certsGrid.innerHTML += `
+      <div class="cert-card">
+        ${foto}
+        <h3>${cert.nome}</h3>
+        <span class="cert-inst">${cert.instituicao}</span>
+        <span class="cert-info">${cert.data}</span>
+        ${botao}
+      </div>
+    `;
+  });
+}
+
+mostrarCertificados("todos");
+
+// botoes de filtro dos certificados
+const certFilterBtns = document.querySelectorAll(".cert-filter");
+
+certFilterBtns.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    certFilterBtns.forEach(function (b) {
+      b.classList.remove("active");
+    });
+    btn.classList.add("active");
+    mostrarCertificados(btn.dataset.filter);
+  });
 });
 
 // modal
@@ -216,7 +243,7 @@ document.querySelectorAll(".nav-links a").forEach(function (link) {
 // ==========================================
 // ANIMACAO QUANDO ROLA A PAGINA
 // ==========================================
-const elementos = document.querySelectorAll(".section-title, .skill-box, .timeline-item, .cert-card, .contact-card, .about");
+const elementos = document.querySelectorAll(".section-title, .skill-box, .timeline-item, .contact-card, .about");
 
 elementos.forEach(function (el) {
   el.classList.add("hidden");
