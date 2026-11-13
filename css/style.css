@@ -895,12 +895,6 @@ img {
   border-color: var(--green);
 }
 
-.cert-card > i {
-  font-size: 1.8rem;
-  color: var(--yellow);
-  margin-bottom: 8px;
-}
-
 .cert-card h3 {
   color: var(--white);
   font-size: 1.05rem;
@@ -934,12 +928,42 @@ img {
   background-color: rgba(63, 185, 80, 0.1);
 }
 
-/* modal do certificado */
+/* imagem pequena no card */
+.cert-thumb {
+  width: 100%;
+  aspect-ratio: 1.41 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cert-thumb:hover {
+  transform: scale(1.02);
+}
+
+.cert-thumb-vazio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c2128;
+  cursor: default;
+  font-size: 2.5rem;
+  color: var(--yellow);
+}
+
+.cert-thumb-vazio:hover {
+  transform: none;
+}
+
+/* modal (certificados e imagens dos projetos) */
 .modal {
   display: none;
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.88);
   z-index: 200;
   justify-content: center;
   align-items: center;
@@ -952,23 +976,34 @@ img {
 
 .modal-content {
   position: relative;
-  max-width: 900px;
+  width: 95vw;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 .modal-content img {
-  border-radius: 8px;
+  width: 100%;
   max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .modal-close {
   position: absolute;
-  top: -40px;
+  top: -44px;
   right: 0;
   background: none;
   border: none;
   color: var(--white);
-  font-size: 2rem;
+  font-size: 2.4rem;
   cursor: pointer;
+}
+
+.modal-pdf {
+  background-color: var(--bg);
 }
 
 /* =========================

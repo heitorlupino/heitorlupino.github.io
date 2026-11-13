@@ -336,37 +336,105 @@ const projetos = [
 
 
 // COMO ADICIONAR UM CERTIFICADO:
-// coloca a imagem na pasta assets/certificados
-// e escreve o caminho em "imagem" (se não tiver imagem ainda deixa "")
+// coloca a imagem (e o PDF, se tiver) na pasta assets/certificados
+// e escreve o caminho em "imagem" e "pdf" (se não tiver ainda deixa "")
 const certificados = [
   {
     nome: "Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes",
     instituicao: "DIO - Bradesco",
-    data: "Concluído em 28/06/2026 - 2 horas",
-    imagem: "assets/certificados/fundamentos-ia-moderna.jpg"
+    data: "Junho de 2026 - 2 horas",
+    imagem: "assets/certificados/fundamentos-ia-moderna.jpg",
+    pdf: ""
+  },
+  {
+    nome: "V Semana das Engenharias",
+    instituicao: "UNISAGRADO",
+    data: "Abril de 2026 - 3 horas",
+    imagem: "assets/certificados/semana-engenharias-2026.jpg",
+    pdf: "assets/certificados/semana-engenharias-2026.pdf"
+  },
+  {
+    nome: "VII SITec - Semana de Inovação e Tecnologia (inclui minicurso de automação com LLM, RPA e OCR)",
+    instituicao: "UNISAGRADO",
+    data: "Novembro de 2025 - 9 horas",
+    imagem: "assets/certificados/sitec-2025.jpg",
+    pdf: "assets/certificados/sitec-2025.pdf"
+  },
+  {
+    nome: "Projeto de Extensão Fábrica de Software: Websites, Aplicativos e Jogos",
+    instituicao: "UNISAGRADO",
+    data: "1º semestre de 2025 - 150 horas",
+    imagem: "assets/certificados/fabrica-software-2025.jpg",
+    pdf: "assets/certificados/fabrica-software-2025.pdf"
+  },
+  {
+    nome: "React na Prática - Construindo uma Tela do Zero",
+    instituicao: "UNISAGRADO",
+    data: "Maio de 2025 - 8 horas",
+    imagem: "assets/certificados/react-na-pratica-2025.jpg",
+    pdf: "assets/certificados/react-na-pratica-2025.pdf"
+  },
+  {
+    nome: "VI SITec - Semana de Inovação e Tecnologia (inclui minicurso de chat com WebSocket, Node.js e Angular)",
+    instituicao: "UNISAGRADO",
+    data: "Novembro de 2024 - 7 horas",
+    imagem: "assets/certificados/sitec-2024.jpg",
+    pdf: "assets/certificados/sitec-2024.pdf"
+  },
+  {
+    nome: "XIII Encontro e III Mostra de Extensão",
+    instituicao: "UNISAGRADO",
+    data: "Outubro de 2024 - 1 hora",
+    imagem: "assets/certificados/mostra-extensao-2024.jpg",
+    pdf: "assets/certificados/mostra-extensao-2024.pdf"
+  },
+  {
+    nome: "Introdução ao Figma",
+    instituicao: "UNISAGRADO",
+    data: "Setembro de 2024 - 8 horas",
+    imagem: "assets/certificados/introducao-figma-2024.jpg",
+    pdf: "assets/certificados/introducao-figma-2024.pdf"
+  },
+  {
+    nome: "Projeto de Extensão Fábrica de Software: Websites, Aplicativos e Jogos",
+    instituicao: "UNISAGRADO",
+    data: "1º semestre de 2024 - 35 horas",
+    imagem: "assets/certificados/fabrica-software-2024.jpg",
+    pdf: "assets/certificados/fabrica-software-2024.pdf"
+  },
+  {
+    nome: "Introdução à Unity: produzindo um jogo do zero",
+    instituicao: "UNISAGRADO",
+    data: "Abril de 2024 - 4 horas",
+    imagem: "assets/certificados/introducao-unity-2024.jpg",
+    pdf: "assets/certificados/introducao-unity-2024.pdf"
   },
   {
     nome: "Bootcamp Bradesco - GenAI, Dados & Cibersegurança",
     instituicao: "DIO - Bradesco",
     data: "Em andamento",
-    imagem: ""
+    imagem: "",
+    pdf: ""
   },
   {
     nome: "Python Impressionador",
     instituicao: "Hashtag Treinamentos",
     data: "Em andamento",
-    imagem: ""
+    imagem: "",
+    pdf: ""
   },
   {
     nome: "Construa seu primeiro app com IA",
     instituicao: "DIO - Santander",
     data: "Em andamento",
-    imagem: ""
+    imagem: "",
+    pdf: ""
   },
   {
     nome: "Formação Front-end - HTML, CSS, JavaScript, React e TypeScript",
     instituicao: "Matheus Battisti",
     data: "Em andamento",
-    imagem: ""
+    imagem: "",
+    pdf: ""
   }
 ];

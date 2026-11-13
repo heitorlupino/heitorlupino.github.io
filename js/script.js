@@ -63,14 +63,18 @@ filterBtns.forEach(function (btn) {
 const certsGrid = document.getElementById("certs-grid");
 
 certificados.forEach(function (cert, index) {
+  let foto = "";
   let botao = "";
   if (cert.imagem !== "") {
+    foto = `<img src="${cert.imagem}" alt="${cert.nome}" class="cert-thumb" onclick="abrirCertificado(${index})">`;
     botao = `<button class="cert-btn" onclick="abrirCertificado(${index})">Ver certificado</button>`;
+  } else {
+    foto = `<div class="cert-thumb cert-thumb-vazio"><i class="fa-solid fa-award"></i></div>`;
   }
 
   certsGrid.innerHTML += `
     <div class="cert-card">
-      <i class="fa-solid fa-award"></i>
+      ${foto}
       <h3>${cert.nome}</h3>
       <span class="cert-inst">${cert.instituicao}</span>
       <span class="cert-info">${cert.data}</span>
@@ -82,14 +86,31 @@ certificados.forEach(function (cert, index) {
 // modal
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modal-img");
+const modalPdf = document.getElementById("modal-pdf");
 
 function abrirCertificado(index) {
   modalImg.src = certificados[index].imagem;
+
+  // botao de abrir o PDF original (so se tiver)
+  if (certificados[index].pdf !== "") {
+    modalPdf.href = certificados[index].pdf;
+    modalPdf.style.display = "inline-flex";
+  } else {
+    modalPdf.style.display = "none";
+  }
+
   modal.classList.add("show");
 }
 
 document.getElementById("modal-close").addEventListener("click", function () {
   modal.classList.remove("show");
+});
+
+// fechar com a tecla ESC
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    modal.classList.remove("show");
+  }
 });
 
 // fechar clicando fora da imagem
@@ -167,7 +188,11 @@ const totalJogos = projetos.filter(function (p) {
 
 contar("stat-projetos", projetos.length);
 contar("stat-jogos", totalJogos);
-contar("stat-certs", certificados.length);
+// conta só os certificados que já tem imagem (concluídos)
+const totalCerts = certificados.filter(function (c) {
+  return c.imagem !== "";
+}).length;
+contar("stat-certs", totalCerts);
 
 
 // ==========================================
