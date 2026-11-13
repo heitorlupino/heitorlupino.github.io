@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto | Heitor Lupino</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== MENU ===== -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">&lt;heitor<span>.dev</span> /&gt;</a>
+
+      <button class="menu-btn" id="menu-btn" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#habilidades">Habilidades</a></li>
+        <li><a href="index.html#projetos" class="active">Projetos</a></li>
+        <li><a href="index.html#formacao">Formação</a></li>
+        <li><a href="index.html#certificados">Certificados</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <div class="container">
+
+      <a href="index.html#projetos" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i> Voltar para projetos
+      </a>
+
+      <!-- o conteudo é preenchido pelo js/projeto.js -->
+      <div id="projeto"></div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Feito por Heitor Lupino &copy; <span id="ano"></span></p>
+  </footer>
+
+  <!-- modal pra ver a imagem grande -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Fechar">&times;</button>
+      <img src="" alt="Imagem do projeto" id="modal-img">
+    </div>
+  </div>
+
+  <script src="js/dados.js"></script>
+  <script src="js/projeto.js"></script>
+</body>
+</html>
