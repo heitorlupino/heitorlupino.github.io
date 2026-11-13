@@ -290,22 +290,46 @@ const projetos = [
     tipo: "Projeto de extensão - Coordenador",
     categoria: "outros",
     status: "",
-    resumo: "Ação no Clube da Terceira Idade de Barra Bonita ensinando idosos a reconhecer golpes virtuais.",
+    resumo: "Oficina no Clube da Terceira Idade de Barra Bonita ensinando idosos a reconhecer e evitar golpes pelo celular.",
     descricao: [
-      "Projeto social da faculdade sobre prevenção de golpes virtuais e segurança digital para idosos. Eu fui o coordenador do grupo.",
-      "A ação aconteceu no Clube da Terceira Idade de Barra Bonita, no dia 28/10/2026, e teve mais de 30 idosos participando."
+      "Projeto social da disciplina Sociologia da Responsabilidade Social, sobre prevenção de golpes virtuais e segurança digital para pessoas idosas. Fui o coordenador do grupo de 4 alunos de Ciência da Computação e fiz o primeiro contato com o Clube da Terceira Idade de Barra Bonita - SP.",
+      "Por que esse tema? Na pesquisa que fizemos, 82% dos idosos de São Paulo já receberam tentativa de golpe pela internet e 68% acham quase impossível se proteger. Em 2025 o Brasil teve mais de 346 mil estelionatos por meio eletrônico, e o golpe do falso parente no WhatsApp foi o mais relatado aos bancos em 2024, com cerca de 153 mil casos.",
+      "A ação aconteceu em 28/10/2026, das 8h30 às 9h30. Usamos uma apresentação com letra grande, cores de alto contraste e exemplos de mensagens falsas, um vídeo de campanha oficial da Febraban e a cartilha \"Fique Esperto!\", que cada participante levou para casa. O projeto está ligado às ODS 4 (Educação de Qualidade) e 10 (Redução das Desigualdades) da ONU."
     ],
     comoFoiFeito: [
-      "Contato com o Clube e carta de apresentação assinada pelo presidente",
-      "Criação de uma cartilha ilustrada de 4 páginas com 5 golpes comuns: falso familiar, falso banco, link falso, falsa promoção e perfil falso",
-      "Apresentação de 1 hora no Clube usando a TV do local",
-      "Dinâmica \"Será golpe?\", onde os idosos acertaram todas as situações",
-      "Entrega de 30 cartilhas impressas e relatório final do projeto"
+      "Escolha do tema, do público e do local, e contato com o presidente do Clube por e-mail",
+      "Pesquisa em fontes oficiais (CETIC.br, Fórum Brasileiro de Segurança Pública, Febraban, Ministério dos Direitos Humanos)",
+      "Carta de apresentação assinada pelo presidente do Clube e pela professora",
+      "Apresentação de 15 slides: regra de ouro \"Pare, Desconfie, Confirme\", 6 sinais de golpe e os 5 golpes mais comuns (falso funcionário do banco, falso parente no WhatsApp, falsa venda, link falso e cartão com motoboy)",
+      "Slides de \"Nunca e Sempre\", dicas para proteger o celular e o que fazer se cair em um golpe (banco, B.O., Disque 100)",
+      "Dinâmica \"Será golpe?\" com três situações simuladas, em que os idosos levantavam a mão para dizer se era golpe",
+      "Cartilha ilustrada \"Fique Esperto!\" de 4 páginas, com letra ampliada",
+      "Cuidados com a LGPD: nenhuma senha ou dado pessoal foi pedido e as simulações usaram só celulares do grupo com dados fictícios",
+      "Relatório final em formato de artigo científico (ABNT)"
     ],
-    tecnologias: ["Segurança Digital", "Educação", "Liderança"],
+    resultados: [
+      "Mais de 30 idosos participaram (a previsão era de 15 a 20)",
+      "30 cartilhas impressas entregues",
+      "Os participantes acertaram as 3 situações da dinâmica \"Será golpe?\"",
+      "Os idosos pediram para o grupo voltar ao Clube com novas atividades"
+    ],
+    tecnologias: ["Segurança Digital", "Engenharia Social", "Comunicação", "Liderança"],
     github: "",
     link: "",
-    imagens: [],
+    imagens: [
+      "assets/projetos/projeto-social/slide1.jpg",
+      "assets/projetos/projeto-social/slide2.jpg",
+      "assets/projetos/projeto-social/slide3.jpg",
+      "assets/projetos/projeto-social/slide4.jpg",
+      "assets/projetos/projeto-social/slide5.jpg",
+      "assets/projetos/projeto-social/slide6.jpg",
+      "assets/projetos/projeto-social/slide7.jpg",
+      "assets/projetos/projeto-social/slide8.jpg",
+      "assets/projetos/projeto-social/slide9.jpg",
+      "assets/projetos/projeto-social/slide10.jpg",
+      "assets/projetos/projeto-social/slide11.jpg",
+      "assets/projetos/projeto-social/slide12.jpg"
+    ],
     video: ""
   }
 ];

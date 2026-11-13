@@ -81,6 +81,8 @@ function mostrarProjeto() {
       <ul class="steps">${etapas}</ul>
     </section>
 
+    ${montarResultados()}
+
     <section class="project-section">
       <h2 class="section-title"><span class="green">#</span> Imagens</h2>
       ${montarGaleria()}
@@ -128,6 +130,26 @@ function montarVideo() {
     <section class="project-section">
       <h2 class="section-title"><span class="green">#</span> Vídeo</h2>
       <div class="video-box">${player}</div>
+    </section>
+  `;
+}
+
+
+// resultados (só aparece se o projeto tiver)
+function montarResultados() {
+  if (!projeto.resultados || projeto.resultados.length === 0) {
+    return "";
+  }
+
+  let itens = "";
+  projeto.resultados.forEach(function (r) {
+    itens += `<div class="result-card"><i class="fa-solid fa-circle-check"></i> ${r}</div>`;
+  });
+
+  return `
+    <section class="project-section">
+      <h2 class="section-title"><span class="green">#</span> Resultados</h2>
+      <div class="results">${itens}</div>
     </section>
   `;
 }
