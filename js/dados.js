@@ -15,22 +15,28 @@ const projetos = [
   {
     id: "ia-generativa",
     titulo: "Aplicação com IA Generativa",
-    tipo: "Projeto em grupo - Faculdade",
+    tipo: "Projeto em grupo - Disciplina de IA Generativa",
     categoria: "dados",
     status: "Em andamento",
-    resumo: "Aplicação funcional usando IA generativa (LLM), desenvolvida em grupo na disciplina de IA Generativa.",
+    resumo: "Aplicação funcional com um modelo de linguagem (LLM), feita em grupo de 6 pessoas, com relatório, apresentação e vídeo tutorial.",
     descricao: [
-      "Projeto prático da disciplina de IA Generativa, feito em um grupo de 6 pessoas. O objetivo é criar uma aplicação que funcione de verdade usando IA generativa para resolver um problema.",
-      "Além da aplicação, o projeto tem um relatório detalhado, uma apresentação com demonstração ao vivo e um vídeo tutorial de cerca de 10 minutos ensinando a usar uma ferramenta de IA generativa."
+      "Projeto prático da disciplina de IA Generativa, feito em um grupo de 6 pessoas. O desafio é escolher um problema real e criar uma aplicação que funcione de verdade usando IA generativa para resolvê-lo.",
+      "Por que esse projeto é importante pra mim? Ele junta as duas coisas que mais estou estudando agora: Python para dados e modelos de linguagem. Além de programar, o grupo precisa explicar como a IA foi usada em cada etapa, mostrando os prompts, os diagramas e uma visão crítica sobre os resultados.",
+      "A entrega tem duas partes: a aplicação com código-fonte, relatório e apresentação com demonstração ao vivo, e um vídeo tutorial de cerca de 10 minutos ensinando a usar uma ferramenta de IA generativa."
     ],
     comoFoiFeito: [
-      "Escolha do problema e definição do que a aplicação deveria fazer",
-      "Desenvolvimento da aplicação usando um modelo de linguagem (LLM)",
-      "Registro dos prompts, diagramas e do processo no relatório",
+      "Escolha do problema e definição do que a aplicação precisa resolver",
+      "Desenvolvimento em Python usando um modelo de linguagem (LLM)",
+      "Registro dos prompts, diagramas e decisões no relatório, com visão crítica sobre o uso da IA",
       "Gravação e edição do vídeo tutorial em grupo",
-      "Apresentação oral com demonstração da aplicação"
+      "Apresentação oral com demonstração da aplicação funcionando"
     ],
-    tecnologias: ["Python", "Pandas", "LLM", "Prompt Engineering"],
+    resultados: [
+      "Entrega prevista para 19/11/2026",
+      "Trabalho em equipe de 6 pessoas com divisão de tarefas",
+      "Prática real com LLMs, prompts e Python"
+    ],
+    tecnologias: ["Python", "LLM", "Prompt Engineering"],
     github: "",
     link: "",
     imagens: [],
@@ -42,17 +48,24 @@ const projetos = [
     tipo: "Jornada Python - Hashtag Treinamentos",
     categoria: "dados",
     status: "",
-    resumo: "Bot que faz o cadastro automático de produtos em um sistema, lendo os dados de um arquivo CSV.",
+    resumo: "Bot que faz login em um sistema e cadastra produtos sozinho, lendo os dados de uma base em CSV.",
     descricao: [
-      "Projeto feito na Jornada Python da Hashtag Treinamentos, com o professor Lira. A ideia foi usar Python para automatizar uma tarefa repetitiva: cadastrar vários produtos em um sistema web.",
-      "O bot abre o navegador, entra na página de login, preenche as credenciais e depois cadastra cada produto usando os dados de uma planilha CSV, tudo sozinho. No vídeo dá pra ver o projeto funcionando."
+      "Projeto feito na Jornada Python da Hashtag Treinamentos, com o professor João Paulo Rodrigues de Lira. A ideia foi usar Python para automatizar uma tarefa repetitiva e chata: cadastrar dezenas de produtos, um por um, em um sistema web.",
+      "Por que automatizar? Em muitas empresas, alguém passa horas copiando dados de uma planilha para um sistema. Com algumas linhas de Python, o computador faz esse trabalho sozinho, sem erro de digitação e muito mais rápido.",
+      "O bot abre o navegador, entra na página de login, preenche as credenciais e depois percorre toda a base de produtos cadastrando cada item. No vídeo dá pra ver o projeto funcionando do começo ao fim."
     ],
     comoFoiFeito: [
       "Uso do PyAutoGUI para controlar o mouse e o teclado",
       "Abertura do navegador e login automático no sistema",
-      "Leitura da base de produtos (CSV) com Pandas",
-      "Loop que percorre cada linha da tabela e preenche o formulário de cadastro",
-      "Testes e ajustes nos tempos de espera entre as ações"
+      "Leitura da base de produtos (arquivo CSV) com Pandas",
+      "Loop que percorre cada linha da tabela e preenche todos os campos do formulário",
+      "Pausas entre as ações para o sistema ter tempo de carregar",
+      "Testes e ajustes até o cadastro rodar do início ao fim sem intervenção"
+    ],
+    resultados: [
+      "Todos os produtos da base cadastrados automaticamente",
+      "Primeiro contato prático com automação de processos (RPA)",
+      "Projeto publicado no LinkedIn com vídeo do bot funcionando"
     ],
     tecnologias: ["Python", "PyAutoGUI", "Pandas", "Automação"],
     github: "",
@@ -61,25 +74,95 @@ const projetos = [
     video: "https://www.linkedin.com/embed/feed/update/urn:li:activity:7482454699271643136"
   },
   {
+    id: "rag-python",
+    titulo: "Assistente com RAG em Python",
+    tipo: "Exercícios de aula - IA",
+    categoria: "dados",
+    status: "",
+    resumo: "Sequência de 6 exercícios que monta, passo a passo, um assistente que responde perguntas com base em documentos de uma empresa.",
+    descricao: [
+      "RAG (Retrieval-Augmented Generation) é a técnica usada para fazer um modelo de linguagem responder com base em documentos específicos, em vez de inventar respostas. Nesses exercícios de aula eu construí essa técnica do zero, uma etapa por vez.",
+      "Por que isso é útil? Empresas têm regulamentos, manuais e políticas que um chatbot comum não conhece. Com RAG, o assistente busca o trecho certo do documento e usa esse trecho para responder. Para testar, usei o regulamento interno de RH de uma empresa fictícia.",
+      "No último exercício, as etapas se juntam em um assistente completo: ele lê o documento, divide em partes, transforma em vetores, encontra o trecho mais parecido com a pergunta e manda para o LLM gerar a resposta."
+    ],
+    comoFoiFeito: [
+      "Exercício 1: leitura de texto de arquivos TXT e PDF (pypdf)",
+      "Exercício 2: divisão do texto em pedaços menores (chunks)",
+      "Exercício 3: geração de embeddings com Sentence Transformers (modelo all-MiniLM-L6-v2)",
+      "Exercício 4: busca do trecho mais relevante usando similaridade de cosseno com NumPy",
+      "Exercício 5: envio da pergunta e do contexto para um LLM pela API da Groq",
+      "Exercício 6: assistente completo, da ingestão do documento até a resposta",
+      "Chave da API guardada em arquivo .env com python-dotenv"
+    ],
+    resultados: [
+      "Assistente que responde perguntas sobre o regulamento usando só o conteúdo do documento",
+      "Entendimento prático de embeddings, busca vetorial e LLMs"
+    ],
+    tecnologias: ["Python", "RAG", "Embeddings", "NumPy", "Groq / LLM"],
+    github: "https://github.com/heitorlupino/ExAulaVictor_RAG",
+    link: "",
+    imagens: [],
+    video: ""
+  },
+  {
+    id: "drivespot",
+    titulo: "DriveSpot",
+    tipo: "Projeto em grupo - Aplicações Digitais",
+    categoria: "dados",
+    status: "",
+    resumo: "Sistema web para gerenciar veículos, marcas e categorias, com login, filtros e relatórios, feito em Python, Flask e MySQL.",
+    descricao: [
+      "DriveSpot é uma aplicação web para cadastrar e organizar informações de veículos, desenvolvida em grupo para a disciplina Aplicações Digitais: Planejamento e Produção.",
+      "O objetivo foi juntar programação, banco de dados relacional e boas práticas em um sistema completo: o usuário cria uma conta, faz login e consegue cadastrar, editar, buscar e remover veículos, além de gerar relatórios sobre a frota.",
+      "O projeto foi organizado em camadas: as rotas da interface web ficam separadas dos serviços com as regras de negócio e dos repositórios que conversam com o banco de dados."
+    ],
+    comoFoiFeito: [
+      "Modelagem do banco de dados MySQL com tabelas de usuários, veículos, marcas e categorias",
+      "Repositórios em Python para cada tabela, com todas as operações de CRUD",
+      "Camada de serviços com as regras de cadastro, busca, edição e relatório",
+      "Interface web com Flask: telas de cadastro, login, tela inicial, editar, remover e relatório",
+      "Login obrigatório para as telas do sistema e upload da foto de cada veículo",
+      "Filtros por marca, categoria, ano e preço, e relatório com quantidade por categoria e preço médio",
+      "Validações e tratamento de erros nas entradas do usuário",
+      "Configurações do banco em arquivo .env"
+    ],
+    resultados: [
+      "Sistema web funcionando com CRUD completo",
+      "Mais de 20 veículos cadastrados para teste, com fotos",
+      "Código separado em camadas (rotas, serviços e banco de dados)"
+    ],
+    tecnologias: ["Python", "Flask", "MySQL", "SQL", "HTML / CSS"],
+    github: "https://github.com/heitorlupino/DriveSpot",
+    link: "",
+    imagens: [],
+    video: ""
+  },
+  {
     id: "cadastro-pessoas-python",
     titulo: "Cadastro de Pessoas em Python",
-    tipo: "Exercício - Faculdade",
+    tipo: "Exercício - Estudos de Python",
     categoria: "dados",
     status: "",
     resumo: "Programa que coleta dados de várias pessoas, guarda em uma lista de dicionários e calcula a média de idade.",
     descricao: [
-      "Exercício que fiz nos estudos de Ciência da Computação para praticar listas e dicionários em Python.",
-      "O programa pede nome, sexo e idade de várias pessoas até o usuário querer parar. No final ele mostra quantas pessoas foram cadastradas, a média de idade e a lista de quem está acima da média."
+      "Exercício que fiz nos meus estudos de Python para praticar listas e dicionários, que são a base para trabalhar com dados depois em bibliotecas como o Pandas.",
+      "O programa pergunta nome, sexo e idade de várias pessoas até o usuário decidir parar. No final ele mostra quantas pessoas foram cadastradas, a média de idade, as mulheres cadastradas e a lista de quem está acima da média.",
+      "Esse e outros exercícios estão no meu repositório Estudos-Python, organizado pelos módulos do curso Python Impressionador (lógica, variáveis, condições, strings, listas, for e while)."
     ],
     comoFoiFeito: [
       "Cada pessoa é guardada em um dicionário, e todos os dicionários ficam em uma lista",
-      "Loop while para cadastrar até o usuário digitar N",
+      "Loop while para continuar cadastrando até o usuário digitar N",
       "Validação das respostas (sexo só M ou F, continuar só S ou N)",
-      "Cálculo da média de idade",
-      "Exibição das pessoas que estão acima da média"
+      "Uso de .copy() para não perder os dados ao limpar o dicionário",
+      "Cálculo da média de idade e filtro de quem está acima dela",
+      "Saída formatada com f-strings"
     ],
-    tecnologias: ["Python", "Listas", "Dicionários"],
-    github: "",
+    resultados: [
+      "Programa funcionando com validação de todas as entradas",
+      "Base de listas e dicionários para seguir em análise de dados"
+    ],
+    tecnologias: ["Python", "Listas", "Dicionários", "Lógica"],
+    github: "https://github.com/heitorlupino/Estudos-Python",
     link: "",
     imagens: [
       "assets/projetos/python-cadastro/imagem1.jpg",
@@ -96,28 +179,40 @@ const projetos = [
     tipo: "Jogo mobile - Publicado na Play Store",
     categoria: "jogos",
     status: "",
-    resumo: "Jogo educativo para Android com três minijogos sobre empatia e solidariedade, feito em Flutter.",
+    resumo: "Jogo educativo para Android com três minijogos sobre empatia e solidariedade, feito em Flutter e publicado na Play Store.",
     descricao: [
-      "Jornada do Bem é um jogo para celular criado para inspirar atitudes de empatia, generosidade e solidariedade, principalmente em crianças e jovens. Ele foi publicado na Play Store.",
-      "Desenvolvemos o jogo em equipe de março a junho, com orientação dos professores Elvio Gilberto da Silva e Luis Filipe Grael Tinós."
+      "Jornada do Bem é um jogo para celular criado para inspirar atitudes de empatia, generosidade e solidariedade, principalmente em crianças e jovens. O jogador acompanha uma pequena história e depois cumpre missões que representam ações solidárias do dia a dia.",
+      "Por que um jogo? Falar de solidariedade para crianças pode ficar chato rápido. Transformando cada ação em um desafio, com pontuação e fases, a mensagem chega de um jeito divertido. Trabalhar com um tema social também fez o grupo pensar além do código: projetar com empatia e comunicar com propósito.",
+      "O jogo foi desenvolvido em equipe de março a junho, com orientação do professor Elvio Gilberto da Silva e colaboração do professor Luis Filipe Grael Tinós, e foi publicado na Google Play Store."
     ],
     comoFoiFeito: [
-      "Design das telas e personagens no Figma",
-      "Desenvolvimento do jogo em Flutter / Dart",
-      "Minijogo 1: montar uma cesta básica escolhendo os alimentos certos",
-      "Minijogo 2: separar as roupas boas para doação, tirando as rasgadas ou sujas",
-      "Minijogo 3: limpar o parque recolhendo o lixo",
-      "Publicação do jogo na Google Play Store"
+      "Design das telas, personagens e história no Figma",
+      "Desenvolvimento em Flutter / Dart, com as telas organizadas em componentes",
+      "Minijogo 1 - Coleta de Alimentos: escolher os alimentos certos para montar a cesta básica",
+      "Minijogo 2 - Separação de Roupas: tirar as roupas rasgadas ou sujas antes da doação, com 3 fases de dificuldade crescente (mais roupas, menos erros permitidos e objetos mais rápidos)",
+      "Minijogo 3 - Coleta de Lixo: recolher os resíduos e deixar o parque limpo",
+      "Telas de história, \"como jogar\" e créditos",
+      "Sistema de pontuação e feedback de acordo com o desempenho",
+      "Gerenciamento de estado com setState e uso de imagens e sons locais",
+      "Publicação na Google Play Store"
+    ],
+    resultados: [
+      "Jogo publicado na Google Play Store",
+      "3 minijogos completos, um deles com 3 fases",
+      "Projeto em equipe de 5 pessoas do início ao lançamento"
     ],
     tecnologias: ["Flutter", "Dart", "Figma", "Android"],
-    github: "",
-    link: "https://lnkd.in/e-Ud9_GD",
+    github: "https://github.com/heitorlupino/Missao-Solidaria",
+    link: "https://play.google.com/store/apps/details?id=br.edu.unisagrado.jornadadobem",
     imagens: [
       "assets/projetos/jornada-do-bem/imagem1.jpg",
       "assets/projetos/jornada-do-bem/imagem2.jpg",
       "assets/projetos/jornada-do-bem/imagem3.jpg",
       "assets/projetos/jornada-do-bem/imagem4.jpg",
-      "assets/projetos/jornada-do-bem/imagem5.jpg"
+      "assets/projetos/jornada-do-bem/imagem5.jpg",
+      "assets/projetos/jornada-do-bem/como-jogar1.jpg",
+      "assets/projetos/jornada-do-bem/como-jogar2.jpg",
+      "assets/projetos/jornada-do-bem/como-jogar3.jpg"
     ],
     video: ""
   },
@@ -129,16 +224,22 @@ const projetos = [
     status: "",
     resumo: "Jogo educacional para computador que ensina o descarte correto do lixo de um jeito divertido.",
     descricao: [
-      "Reciclei! é um jogo educacional para computador feito no Projeto de Extensão Fábrica de Software do UNISAGRADO. O objetivo é ensinar o descarte correto de resíduos de forma divertida e desafiadora.",
+      "Reciclei! é um jogo educacional para computador feito no Projeto de Extensão Fábrica de Software: Desenvolvimento de Websites, Aplicativos e Jogos, do UNISAGRADO. O objetivo é ensinar o descarte correto de resíduos de forma divertida e desafiadora.",
+      "Por que esse tema? Muita gente ainda tem dúvida sobre em qual lixeira colocar cada tipo de resíduo. Um jogo sério (serious game) permite treinar isso jogando, recebendo resposta na hora quando acerta ou erra.",
       "O jogo foi desenvolvido em equipe com tutoria do professor Luis Filipe Grael Tinós e orientação do professor Elvio Gilberto da Silva. No vídeo aparece um pouco da gameplay."
     ],
     comoFoiFeito: [
       "Definição do tema (descarte correto de resíduos) e das regras do jogo",
       "Criação das telas de menu, tutorial e créditos",
-      "Desenvolvimento da mecânica de separar cada resíduo na lixeira certa",
-      "Testes e apresentação do jogo no projeto de extensão"
+      "Mecânica de separar cada resíduo na lixeira da cor certa",
+      "Testes com o grupo e com os professores",
+      "Apresentação do jogo no projeto de extensão"
     ],
-    tecnologias: ["Jogo educacional", "Serious Games", "Trabalho em equipe"],
+    resultados: [
+      "Jogo completo e jogável apresentado na Fábrica de Software",
+      "Feito na Fábrica de Software de 2024 (35 horas, com certificado)"
+    ],
+    tecnologias: ["Serious Games", "Game Design", "Trabalho em equipe"],
     github: "",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7214701438134857729/",
     imagens: [],
@@ -150,20 +251,29 @@ const projetos = [
     tipo: "Projeto acadêmico - Realidade Virtual",
     categoria: "jogos",
     status: "",
-    resumo: "Museu histórico em realidade virtual com três eras: Pré-História, Idade Média e Futuro.",
+    resumo: "Museu interativo em realidade virtual: o jogador viaja pela Pré-História, Idade Média e Futuro e explora artefatos com narração.",
     descricao: [
-      "ChronoMundi é uma experiência de museu em realidade virtual onde o jogador visita três eras da história: Pré-História, Idade Média e Futuro. Em cada era existem artefatos que o jogador pode ver de perto e ler uma descrição sobre eles.",
-      "O projeto foi feito na Unity usando o XR Interaction Toolkit para as interações em VR."
+      "ChronoMundi é um museu virtual imersivo feito na Unity. A partir de um hub central, o jogador entra em portais que levam a três eras: Pré-História, Idade Média e Futuro Tecnológico. Em cada era existem artefatos que podem ser examinados, com painel de informações e narração.",
+      "Por que um museu em VR? Ver um artefato de perto, em um ambiente da época, ensina muito mais do que ler sobre ele. O projeto funciona tanto em VR (com óculos compatíveis) quanto no computador, com teclado e mouse.",
+      "Para avançar, o jogador precisa explorar todos os artefatos da era. Quando completa, uma saída brilhante é liberada e ele volta ao hub para escolher a próxima viagem."
     ],
     comoFoiFeito: [
-      "Revisão do código do projeto inteiro para encontrar problemas",
-      "Correção do menu de pausa, que não respondia aos cliques (faltava o EventSystem e o GraphicRaycaster)",
-      "Ajuste das coroutines para usar tempo sem escala, assim elas continuam funcionando com o jogo pausado",
-      "Criação de ferramentas no editor (XRSceneBuilder e ChronoMundiCompleteSetup) para automatizar a montagem das cenas",
-      "Escrita dos textos descritivos dos artefatos das três eras",
-      "Configuração de materiais PBR com texturas gratuitas no URP"
+      "5 cenas: menu, hub do museu e uma cena para cada era",
+      "Portais no hub que levam aos ambientes temáticos",
+      "Interação com artefatos (tecla E) abrindo um painel com título e descrição, que fecha com F ou sozinho depois de um tempo",
+      "Sistema de narração com áudio e legendas",
+      "Sistema de progresso que libera a saída quando todos os artefatos da era são explorados",
+      "Suporte a VR com XR Interaction Toolkit e também a teclado e mouse",
+      "Ferramentas no editor para montar as cenas, criar os prefabs e validar o projeto automaticamente",
+      "Correção do menu de pausa e ajuste das animações para funcionarem com o jogo pausado",
+      "Textos dos artefatos das três eras e materiais PBR no URP"
     ],
-    tecnologias: ["Unity 2022.3", "C#", "XR Interaction Toolkit", "URP"],
+    resultados: [
+      "3 eras completas para explorar, cada uma com seus artefatos",
+      "Funciona em VR e no computador",
+      "Ferramentas de editor que montam as cenas em poucos cliques"
+    ],
+    tecnologias: ["Unity", "C#", "XR Interaction Toolkit", "TextMeshPro", "URP"],
     github: "https://github.com/heitorlupino/ChronoMundi",
     link: "",
     imagens: [],
@@ -175,18 +285,25 @@ const projetos = [
     tipo: "Projeto acadêmico - Jogo FPS",
     categoria: "jogos",
     status: "",
-    resumo: "Jogo de tiro em primeira pessoa feito na Unreal Engine 5 usando Blueprints.",
+    resumo: "Jogo de tiro em primeira pessoa feito na Unreal Engine 5, com armas, inimigos com IA e animações, tudo em Blueprints.",
     descricao: [
-      "Protocolo Omega é um jogo de tiro em primeira pessoa (FPS) desenvolvido na Unreal Engine 5 como projeto da faculdade.",
-      "Toda a lógica do jogo foi feita com Blueprints, o sistema visual de programação da Unreal."
+      "Protocolo Omega é um jogo de tiro em primeira pessoa (FPS) desenvolvido na Unreal Engine 5 como projeto da faculdade. Toda a lógica foi feita com Blueprints, o sistema de programação visual da Unreal.",
+      "Por que esse projeto? Foi meu primeiro contato sério com a Unreal Engine, depois de já ter trabalhado com Unity. Um FPS envolve muitos sistemas conversando entre si (armas, vida, inimigos e animação), o que é ótimo para aprender a organizar um jogo maior.",
+      "Um dos maiores desafios foi a animação do personagem: usamos um esqueleto militar personalizado e foi preciso resolver problemas de locomoção, posição das armas e câmera."
     ],
     comoFoiFeito: [
       "Sistema de tiro e recarga das armas",
       "Sistema de vida e morte do jogador",
       "Troca de armas usando um enum (E_WeaponType)",
       "Inimigos com inteligência artificial usando Behavior Trees",
-      "Armas separadas para primeira e terceira pessoa, mostrando só a certa em cada câmera",
-      "Animation Blueprint com State Machine e estado de corrida (Run)"
+      "Modelos de arma separados para primeira e terceira pessoa, mostrando só o certo em cada câmera",
+      "Correção da arma que aparecia na cabeça do personagem (socket errado no esqueleto)",
+      "Animation Blueprint com State Machine e estado de corrida (Run)",
+      "Guia em Blueprints documentando os sistemas para o grupo"
+    ],
+    resultados: [
+      "FPS jogável com armas, inimigos com IA e animações",
+      "Experiência com Blueprints, Behavior Trees e Animation Blueprints"
     ],
     tecnologias: ["Unreal Engine 5", "Blueprints", "Behavior Tree", "Animation Blueprint"],
     github: "",
@@ -204,6 +321,7 @@ const projetos = [
     descricao: [
       "A Aventura de Pip: Vale dos Slimes é um jogo de plataforma 2D que fiz sozinho como trabalho individual da disciplina de Desenvolvimento de Jogos Digitais, na Unity 6.",
       "O jogador controla o Pip e precisa atravessar o vale juntando moedas, desviando de espinhos e buracos e pulando em cima dos slimes até chegar na bandeira dourada no fim da fase. O jogo tem menu, pausa, tela de game over, tela de vitória e salva o recorde de pontos.",
+      "Por que fazer tudo do zero? Em vez de usar um pacote pronto, quis entender como cada parte de um jogo de plataforma funciona: física do pulo, colisões, câmera, interface e até o som, que é gerado por código.",
       "Controles: A/D ou setas para andar, Espaço ou W para pular (segurando pula mais alto), ESC para pausar, R para recomeçar e M para voltar ao menu. Também funciona com controle."
     ],
     comoFoiFeito: [
@@ -218,6 +336,11 @@ const projetos = [
       "Fundo com efeito parallax (montanhas, colinas e nuvens)",
       "Música chiptune e efeitos sonoros 8-bit gerados por código, sem arquivos de áudio",
       "Script de editor que monta a fase inteira a partir de um mapa em texto, escolhendo os blocos de grama e terra automaticamente"
+    ],
+    resultados: [
+      "Fase completa com 28 moedas, 7 slimes, checkpoint e bandeira final",
+      "Jogo com menu, pausa, game over, vitória e recorde salvo",
+      "Funciona com teclado e com controle"
     ],
     tecnologias: ["Unity 6", "C#", "Física 2D", "Pixel Art"],
     github: "",
@@ -234,22 +357,28 @@ const projetos = [
   {
     id: "rede-codevale",
     titulo: "Projeto de Rede - Codevale",
-    tipo: "Projeto em grupo - Redes",
+    tipo: "Projeto em grupo - Redes e Sistemas Distribuídos",
     categoria: "outros",
     status: "",
     resumo: "Projeto de infraestrutura de rede para uma empresa fictícia, feito pela equipe Nexo Consultoria em Redes.",
     descricao: [
-      "Projeto da disciplina de Redes e Sistemas Distribuídos. Nossa equipe, a Nexo Consultoria em Redes, fez o projeto de infraestrutura de rede da Codevale Tecnologia Ltda., uma empresa fictícia.",
-      "Na mesma disciplina também fizemos uma campanha educativa nas redes sociais sobre segurança em redes, usando os dados do projeto."
+      "Projeto da disciplina de Redes e Sistemas Distribuídos. Nossa equipe, a Nexo Consultoria em Redes, fez o papel de uma consultoria contratada para planejar toda a infraestrutura de rede da Codevale Tecnologia Ltda., uma empresa fictícia.",
+      "Por que esse formato? Simular uma consultoria obriga a pensar como no mercado: entender o que o cliente precisa, propor uma solução que caiba no orçamento e explicar as escolhas de forma clara, inclusive para quem não é técnico.",
+      "Na mesma disciplina, usamos os dados do projeto para criar uma campanha educativa nas redes sociais sobre segurança em redes."
     ],
     comoFoiFeito: [
-      "Levantamento das necessidades da empresa",
-      "Planejamento da infraestrutura de rede",
-      "Documentação do projeto",
+      "Levantamento das necessidades da empresa e dos setores",
+      "Planejamento da topologia e dos equipamentos da rede",
+      "Definição das medidas de segurança da rede",
+      "Documentação completa do projeto para o cliente",
       "Campanha educativa com publicações sobre segurança em redes",
-      "Apresentação do projeto para a turma"
+      "Apresentação do projeto para a turma, adaptando a linguagem para um público menos técnico"
     ],
-    tecnologias: ["Redes", "Infraestrutura", "Segurança"],
+    resultados: [
+      "Projeto de infraestrutura entregue e apresentado",
+      "Campanha educativa sobre segurança em redes criada com os dados do projeto"
+    ],
+    tecnologias: ["Redes", "Infraestrutura", "Segurança", "Documentação"],
     github: "",
     link: "",
     imagens: [],
@@ -258,19 +387,26 @@ const projetos = [
   {
     id: "campanha-lgpd",
     titulo: "Campanha sobre a LGPD",
-    tipo: "Projeto em grupo - Banco de Dados",
+    tipo: "Projeto em grupo - Princípios de Banco de Dados",
     categoria: "outros",
     status: "",
-    resumo: "Série de posts explicando a Lei Geral de Proteção de Dados de forma simples para usuários comuns.",
+    resumo: "Série de posts explicando a Lei Geral de Proteção de Dados de forma simples, para usuários comuns e para empresas.",
     descricao: [
-      "Na disciplina de Princípios de Banco de Dados, meu grupo estudou a LGPD (Lei Geral de Proteção de Dados) e como as empresas devem cuidar das informações pessoais nos seus sistemas.",
-      "Depois criamos uma série de posts para o LinkedIn explicando a lei de um jeito simples: o que ela é, quais são os direitos de quem tem seus dados guardados e por que isso importa."
+      "Na disciplina de Princípios de Banco de Dados, meu grupo estudou a LGPD (Lei Geral de Proteção de Dados) e como as empresas devem cuidar das informações pessoais guardadas nos seus sistemas e processos.",
+      "Por que esse tema? Quem trabalha com banco de dados lida o tempo todo com dados de pessoas. Percebemos que a maioria dos usuários não sabe para onde vão seus dados quando preenche um formulário, e que muitas empresas tratam a LGPD só como obrigação, e não como parte da cultura.",
+      "Criamos então duas séries de posts para o LinkedIn: uma para usuários comuns, explicando seus direitos, e outra para empresas, mostrando as medidas técnicas e administrativas que a lei exige."
     ],
     comoFoiFeito: [
       "Estudo da LGPD e de como ela se aplica aos bancos de dados das empresas",
-      "Pesquisa sobre medidas de proteção: consentimento, controle de acesso, criptografia e anonimização",
-      "Criação dos cards com linguagem simples, pensando em quem não é da área",
-      "Publicação da campanha no LinkedIn"
+      "Pesquisa sobre medidas de proteção: consentimento, controle de acesso, registro de operações, criptografia e anonimização",
+      "Série para usuários: o que é a LGPD, quais são os seus direitos e por que isso importa",
+      "Série para empresas: políticas de privacidade, treinamento da equipe e monitoramento",
+      "Criação dos cards com linguagem simples e visual padronizado",
+      "Publicação das duas campanhas no LinkedIn"
+    ],
+    resultados: [
+      "2 campanhas publicadas no LinkedIn",
+      "Conteúdo técnico traduzido para quem não é da área"
     ],
     tecnologias: ["LGPD", "Banco de Dados", "Segurança da Informação"],
     github: "",
