@@ -583,6 +583,14 @@ img {
   border: none;
 }
 
+/* post do linkedin é mais alto que um video normal */
+.video-box.linkedin-box {
+  aspect-ratio: auto;
+  height: 720px;
+  max-width: 560px;
+  background-color: #fff;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

@@ -99,6 +99,18 @@ function montarVideo() {
 
   let player = "";
 
+  if (projeto.video.includes("linkedin.com/embed")) {
+    // post do linkedin com o video
+    return `
+      <section class="project-section">
+        <h2 class="section-title"><span class="green">#</span> Vídeo</h2>
+        <div class="video-box linkedin-box">
+          <iframe src="${projeto.video}" title="Vídeo do projeto no LinkedIn" allowfullscreen></iframe>
+        </div>
+      </section>
+    `;
+  }
+
   if (projeto.video.includes("youtube.com") || projeto.video.includes("youtu.be")) {
     // pega o codigo do video no link do youtube
     let codigo = "";

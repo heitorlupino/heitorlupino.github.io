@@ -37,27 +37,112 @@ const projetos = [
     video: ""
   },
   {
-    id: "estudos-python",
-    titulo: "Estudos de Python e Dados",
-    tipo: "Estudo pessoal",
+    id: "bot-automacao-python",
+    titulo: "Bot de Automação com Python",
+    tipo: "Jornada Python - Hashtag Treinamentos",
     categoria: "dados",
-    status: "Em andamento",
-    resumo: "Exercícios e mini projetos feitos durante o curso Python Impressionador: automações e análise de dados com Pandas.",
+    status: "",
+    resumo: "Bot que faz o cadastro automático de produtos em um sistema, lendo os dados de um arquivo CSV.",
     descricao: [
-      "Aqui ficam os exercícios e mini projetos que estou fazendo enquanto estudo Python pelo curso Python Impressionador, da Hashtag Treinamentos.",
-      "Meu objetivo é ganhar base em Python para trabalhar com análise de dados e depois seguir para Machine Learning e IA."
+      "Projeto feito na Jornada Python da Hashtag Treinamentos, com o professor Lira. A ideia foi usar Python para automatizar uma tarefa repetitiva: cadastrar vários produtos em um sistema web.",
+      "O bot abre o navegador, entra na página de login, preenche as credenciais e depois cadastra cada produto usando os dados de uma planilha CSV, tudo sozinho. No vídeo dá pra ver o projeto funcionando."
     ],
     comoFoiFeito: [
-      "Lógica de programação e fundamentos de Python",
-      "Automação de tarefas e manipulação de planilhas",
-      "Leitura, tratamento e análise de dados com Pandas",
-      "Criação de gráficos para visualizar os dados"
+      "Uso do PyAutoGUI para controlar o mouse e o teclado",
+      "Abertura do navegador e login automático no sistema",
+      "Leitura da base de produtos (CSV) com Pandas",
+      "Loop que percorre cada linha da tabela e preenche o formulário de cadastro",
+      "Testes e ajustes nos tempos de espera entre as ações"
     ],
-    tecnologias: ["Python", "Pandas", "Jupyter"],
-    github: "https://github.com/heitorlupino",
-    link: "",
+    tecnologias: ["Python", "PyAutoGUI", "Pandas", "Automação"],
+    github: "",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7482454699271643136/",
     imagens: [],
+    video: "https://www.linkedin.com/embed/feed/update/urn:li:activity:7482454699271643136"
+  },
+  {
+    id: "cadastro-pessoas-python",
+    titulo: "Cadastro de Pessoas em Python",
+    tipo: "Exercício - Faculdade",
+    categoria: "dados",
+    status: "",
+    resumo: "Programa que coleta dados de várias pessoas, guarda em uma lista de dicionários e calcula a média de idade.",
+    descricao: [
+      "Exercício que fiz nos estudos de Ciência da Computação para praticar listas e dicionários em Python.",
+      "O programa pede nome, sexo e idade de várias pessoas até o usuário querer parar. No final ele mostra quantas pessoas foram cadastradas, a média de idade e a lista de quem está acima da média."
+    ],
+    comoFoiFeito: [
+      "Cada pessoa é guardada em um dicionário, e todos os dicionários ficam em uma lista",
+      "Loop while para cadastrar até o usuário digitar N",
+      "Validação das respostas (sexo só M ou F, continuar só S ou N)",
+      "Cálculo da média de idade",
+      "Exibição das pessoas que estão acima da média"
+    ],
+    tecnologias: ["Python", "Listas", "Dicionários"],
+    github: "",
+    link: "",
+    imagens: [
+      "assets/projetos/python-cadastro/imagem1.jpg",
+      "assets/projetos/python-cadastro/imagem2.jpg",
+      "assets/projetos/python-cadastro/imagem3.jpg",
+      "assets/projetos/python-cadastro/imagem4.jpg",
+      "assets/projetos/python-cadastro/imagem5.jpg"
+    ],
     video: ""
+  },
+  {
+    id: "jornada-do-bem",
+    titulo: "Jornada do Bem",
+    tipo: "Jogo mobile - Publicado na Play Store",
+    categoria: "jogos",
+    status: "",
+    resumo: "Jogo educativo para Android com três minijogos sobre empatia e solidariedade, feito em Flutter.",
+    descricao: [
+      "Jornada do Bem é um jogo para celular criado para inspirar atitudes de empatia, generosidade e solidariedade, principalmente em crianças e jovens. Ele foi publicado na Play Store.",
+      "Desenvolvemos o jogo em equipe de março a junho, com orientação dos professores Elvio Gilberto da Silva e Luis Filipe Grael Tinós."
+    ],
+    comoFoiFeito: [
+      "Design das telas e personagens no Figma",
+      "Desenvolvimento do jogo em Flutter / Dart",
+      "Minijogo 1: montar uma cesta básica escolhendo os alimentos certos",
+      "Minijogo 2: separar as roupas boas para doação, tirando as rasgadas ou sujas",
+      "Minijogo 3: limpar o parque recolhendo o lixo",
+      "Publicação do jogo na Google Play Store"
+    ],
+    tecnologias: ["Flutter", "Dart", "Figma", "Android"],
+    github: "",
+    link: "https://lnkd.in/e-Ud9_GD",
+    imagens: [
+      "assets/projetos/jornada-do-bem/imagem1.jpg",
+      "assets/projetos/jornada-do-bem/imagem2.jpg",
+      "assets/projetos/jornada-do-bem/imagem3.jpg",
+      "assets/projetos/jornada-do-bem/imagem4.jpg",
+      "assets/projetos/jornada-do-bem/imagem5.jpg"
+    ],
+    video: ""
+  },
+  {
+    id: "reciclei",
+    titulo: "Reciclei!",
+    tipo: "Projeto de extensão - Fábrica de Software",
+    categoria: "jogos",
+    status: "",
+    resumo: "Jogo educacional para computador que ensina o descarte correto do lixo de um jeito divertido.",
+    descricao: [
+      "Reciclei! é um jogo educacional para computador feito no Projeto de Extensão Fábrica de Software do UNISAGRADO. O objetivo é ensinar o descarte correto de resíduos de forma divertida e desafiadora.",
+      "O jogo foi desenvolvido em equipe com tutoria do professor Luis Filipe Grael Tinós e orientação do professor Elvio Gilberto da Silva. No vídeo aparece um pouco da gameplay."
+    ],
+    comoFoiFeito: [
+      "Definição do tema (descarte correto de resíduos) e das regras do jogo",
+      "Criação das telas de menu, tutorial e créditos",
+      "Desenvolvimento da mecânica de separar cada resíduo na lixeira certa",
+      "Testes e apresentação do jogo no projeto de extensão"
+    ],
+    tecnologias: ["Jogo educacional", "Serious Games", "Trabalho em equipe"],
+    github: "",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7214701438134857729/",
+    imagens: [],
+    video: "https://www.linkedin.com/embed/feed/update/urn:li:activity:7214701438134857729"
   },
   {
     id: "chronomundi",
@@ -157,6 +242,35 @@ const projetos = [
     video: ""
   },
   {
+    id: "campanha-lgpd",
+    titulo: "Campanha sobre a LGPD",
+    tipo: "Projeto em grupo - Banco de Dados",
+    categoria: "outros",
+    status: "",
+    resumo: "Série de posts explicando a Lei Geral de Proteção de Dados de forma simples para usuários comuns.",
+    descricao: [
+      "Na disciplina de Princípios de Banco de Dados, meu grupo estudou a LGPD (Lei Geral de Proteção de Dados) e como as empresas devem cuidar das informações pessoais nos seus sistemas.",
+      "Depois criamos uma série de posts para o LinkedIn explicando a lei de um jeito simples: o que ela é, quais são os direitos de quem tem seus dados guardados e por que isso importa."
+    ],
+    comoFoiFeito: [
+      "Estudo da LGPD e de como ela se aplica aos bancos de dados das empresas",
+      "Pesquisa sobre medidas de proteção: consentimento, controle de acesso, criptografia e anonimização",
+      "Criação dos cards com linguagem simples, pensando em quem não é da área",
+      "Publicação da campanha no LinkedIn"
+    ],
+    tecnologias: ["LGPD", "Banco de Dados", "Segurança da Informação"],
+    github: "",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7391891091102334976/",
+    imagens: [
+      "assets/projetos/lgpd/imagem1.jpg",
+      "assets/projetos/lgpd/imagem2.jpg",
+      "assets/projetos/lgpd/imagem3.jpg",
+      "assets/projetos/lgpd/imagem4.jpg",
+      "assets/projetos/lgpd/imagem5.jpg"
+    ],
+    video: ""
+  },
+  {
     id: "projeto-social",
     titulo: "Projeto Social: Golpes Virtuais",
     tipo: "Projeto de extensão - Coordenador",
@@ -214,6 +328,18 @@ const projetos = [
 // e escreve o caminho em "imagem" (se não tiver imagem ainda deixa "")
 const certificados = [
   {
+    nome: "Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes",
+    instituicao: "DIO - Bradesco",
+    data: "Concluído em 28/06/2026 - 2 horas",
+    imagem: "assets/certificados/fundamentos-ia-moderna.jpg"
+  },
+  {
+    nome: "Bootcamp Bradesco - GenAI, Dados & Cibersegurança",
+    instituicao: "DIO - Bradesco",
+    data: "Em andamento",
+    imagem: ""
+  },
+  {
     nome: "Python Impressionador",
     instituicao: "Hashtag Treinamentos",
     data: "Em andamento",
@@ -222,6 +348,12 @@ const certificados = [
   {
     nome: "Construa seu primeiro app com IA",
     instituicao: "DIO - Santander",
+    data: "Em andamento",
+    imagem: ""
+  },
+  {
+    nome: "Formação Front-end - HTML, CSS, JavaScript, React e TypeScript",
+    instituicao: "Matheus Battisti",
     data: "Em andamento",
     imagem: ""
   }
