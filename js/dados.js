@@ -196,25 +196,39 @@ const projetos = [
   },
   {
     id: "jogo-plataforma-2d",
-    titulo: "Jogo de Plataforma 2D",
-    tipo: "Trabalho individual - Faculdade",
+    titulo: "A Aventura de Pip: Vale dos Slimes",
+    tipo: "Jogo de plataforma 2D - Trabalho individual",
     categoria: "jogos",
-    status: "Em andamento",
-    resumo: "Jogo de plataforma 2D feito individualmente para a disciplina de Desenvolvimento de Jogos Digitais.",
+    status: "",
+    resumo: "Jogo de plataforma 2D em pixel art feito na Unity: atravesse o vale, junte moedas, pule nos slimes e chegue na bandeira.",
     descricao: [
-      "Jogo de plataforma 2D que estou desenvolvendo sozinho como trabalho individual da disciplina de Desenvolvimento de Jogos Digitais.",
-      "O jogo está sendo feito na Unity 6 e precisa cumprir todos os requisitos pedidos pelo professor."
+      "A Aventura de Pip: Vale dos Slimes é um jogo de plataforma 2D que fiz sozinho como trabalho individual da disciplina de Desenvolvimento de Jogos Digitais, na Unity 6.",
+      "O jogador controla o Pip e precisa atravessar o vale juntando moedas, desviando de espinhos e buracos e pulando em cima dos slimes até chegar na bandeira dourada no fim da fase. O jogo tem menu, pausa, tela de game over, tela de vitória e salva o recorde de pontos.",
+      "Controles: A/D ou setas para andar, Espaço ou W para pular (segurando pula mais alto), ESC para pausar, R para recomeçar e M para voltar ao menu. Também funciona com controle."
     ],
     comoFoiFeito: [
-      "Definição do gênero (plataforma 2D) e dos requisitos do trabalho",
-      "Movimentação e pulo do personagem",
-      "Montagem das fases",
-      "Testes e ajustes"
+      "Movimento do jogador com física (Rigidbody2D), aceleração e desaceleração",
+      "Pulo com altura variável, coyote time e jump buffer para o controle ficar mais justo",
+      "Animações por estados (parado, correndo, pulando, caindo) e efeito de squash & stretch",
+      "Slimes que patrulham as plataformas: pular em cima derrota o inimigo, encostar tira uma vida",
+      "Moedas, corações de vida extra, espinhos, checkpoint e bandeira de vitória",
+      "GameManager com máquina de estados (Menu, Jogando, Pausado, Game Over e Vitória), pontos, vidas, tempo e recorde salvo com PlayerPrefs",
+      "HUD com corações, moedas, pontos e tempo, usando fontes pixel art (Press Start 2P e VT323)",
+      "Câmera que segue o jogador suavemente, com limites da fase e tremida ao levar dano",
+      "Fundo com efeito parallax (montanhas, colinas e nuvens)",
+      "Música chiptune e efeitos sonoros 8-bit gerados por código, sem arquivos de áudio",
+      "Script de editor que monta a fase inteira a partir de um mapa em texto, escolhendo os blocos de grama e terra automaticamente"
     ],
-    tecnologias: ["Unity 6", "C#"],
+    tecnologias: ["Unity 6", "C#", "Física 2D", "Pixel Art"],
     github: "",
     link: "",
-    imagens: [],
+    imagens: [
+      "assets/projetos/jogo-plataforma-2d/imagem1.png",
+      "assets/projetos/jogo-plataforma-2d/imagem2.png",
+      "assets/projetos/jogo-plataforma-2d/imagem3.png",
+      "assets/projetos/jogo-plataforma-2d/mapa-fase1.png",
+      "assets/projetos/jogo-plataforma-2d/sprites.png"
+    ],
     video: ""
   },
   {
@@ -289,32 +303,6 @@ const projetos = [
       "Entrega de 30 cartilhas impressas e relatório final do projeto"
     ],
     tecnologias: ["Segurança Digital", "Educação", "Liderança"],
-    github: "",
-    link: "",
-    imagens: [],
-    video: ""
-  },
-  {
-    id: "drone-arduino",
-    titulo: "Drone com Arduino",
-    tipo: "Projeto acadêmico - Hardware",
-    categoria: "outros",
-    status: "",
-    resumo: "Montagem de um mini drone com Arduino Nano, sensor MPU-6050 e firmware MultiWii.",
-    descricao: [
-      "Projeto da faculdade em que montamos um mini drone do zero usando Arduino.",
-      "Toda a montagem foi documentada em um relatório com fotos de cada etapa."
-    ],
-    comoFoiFeito: [
-      "Arduino Nano como controlador de voo",
-      "Sensor MPU-6050 (giroscópio e acelerômetro) para estabilizar o drone",
-      "Módulo Bluetooth HC-05 para comunicação",
-      "Driver DRV8833 e motores coreless 8520",
-      "Bateria LiPo de 750mAh",
-      "Firmware MultiWii",
-      "Relatório com 11 fotos da montagem em ordem"
-    ],
-    tecnologias: ["Arduino", "C++", "MultiWii", "Eletrônica"],
     github: "",
     link: "",
     imagens: [],
