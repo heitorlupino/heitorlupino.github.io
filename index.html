@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Heitor Lupino - Estudante de Ciência da Computação focado em Python, Análise de Dados e IA">
+  <title>Heitor Lupino | Portfolio</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- icones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== MENU ===== -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="#inicio" class="logo">&lt;heitor<span>.dev</span> /&gt;</a>
+
+      <button class="menu-btn" id="menu-btn" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#certificados">Certificados</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== INICIO ===== -->
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <p class="hero-prompt"><span class="green">heitor@portfolio</span>:<span class="blue">~</span>$ whoami</p>
+        <h1 class="hero-title">Olá, eu sou<br><span class="green" id="typing"></span><span class="cursor">_</span></h1>
+        <p class="hero-subtitle">
+          Estudante de Ciência da Computação no UNISAGRADO, estudando
+          <strong>Python</strong>, <strong>Análise de Dados</strong> e <strong>Inteligência Artificial</strong>.
+          Em busca da minha primeira oportunidade na área.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+          <a href="https://github.com/heitorlupino" target="_blank" class="btn btn-outline">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <h2 class="section-title"><span class="green">01.</span> Sobre mim</h2>
+
+        <div class="about">
+          <div class="about-text">
+            <p>
+              Meu nome é Heitor Lupino e sou estudante de Ciência da Computação no
+              Centro Universitário Sagrado Coração (UNISAGRADO), em Bauru - SP.
+            </p>
+            <p>
+              Comecei estudando Java e Spring Boot, mas hoje meu foco está em
+              <span class="green">Python, análise de dados e IA</span>. Estou fazendo os cursos
+              Python Impressionador (Hashtag Treinamentos) e Construa seu primeiro app com IA (DIO),
+              e quero me aprofundar em Machine Learning, Deep Learning e IA Generativa.
+            </p>
+            <p>
+              Na faculdade também desenvolvi alguns jogos (Unity e Unreal Engine), projetos de
+              redes e um projeto social. Gosto de trabalhar em equipe e de aprender coisas novas
+              colocando a mão na massa.
+            </p>
+
+            <ul class="about-list">
+              <li><i class="fa-solid fa-location-dot"></i> São Paulo, Brasil</li>
+              <li><i class="fa-solid fa-graduation-cap"></i> Ciência da Computação - UNISAGRADO</li>
+              <li><i class="fa-solid fa-briefcase"></i> Aberto a estágio / vaga júnior</li>
+            </ul>
+          </div>
+
+          <div class="about-card">
+            <div class="terminal">
+              <div class="terminal-top">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green-dot"></span>
+                <span class="terminal-name">sobre.py</span>
+              </div>
+<pre class="terminal-body"><span class="purple">heitor</span> = {
+    <span class="yellow">"nome"</span>: <span class="green">"Heitor Lupino"</span>,
+    <span class="yellow">"curso"</span>: <span class="green">"Ciência da Computação"</span>,
+    <span class="yellow">"foco"</span>: [<span class="green">"Python"</span>, <span class="green">"Dados"</span>, <span class="green">"IA"</span>],
+    <span class="yellow">"aprendendo"</span>: <span class="green">"Machine Learning"</span>,
+    <span class="yellow">"disponivel"</span>: <span class="blue">True</span>
+}</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HABILIDADES ===== -->
+    <section class="section section-alt" id="habilidades">
+      <div class="container">
+        <h2 class="section-title"><span class="green">02.</span> Habilidades</h2>
+
+        <div class="skills-grid">
+          <div class="skill-box">
+            <h3><i class="fa-solid fa-chart-line"></i> Dados & IA</h3>
+            <ul class="tags">
+              <li>Python</li>
+              <li>Pandas</li>
+              <li>Análise de Dados</li>
+              <li>LLMs / IA Generativa</li>
+              <li>Prompt Engineering</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+
+          <div class="skill-box">
+            <h3><i class="fa-solid fa-code"></i> Desenvolvimento</h3>
+            <ul class="tags">
+              <li>Java</li>
+              <li>Spring Boot</li>
+              <li>Flask</li>
+              <li>SQLite</li>
+              <li>HTML / CSS / JS</li>
+              <li>C#</li>
+            </ul>
+          </div>
+
+          <div class="skill-box">
+            <h3><i class="fa-solid fa-screwdriver-wrench"></i> Ferramentas</h3>
+            <ul class="tags">
+              <li>Git / GitHub</li>
+              <li>VS Code</li>
+              <li>Docker (básico)</li>
+              <li>Unity</li>
+              <li>Unreal Engine 5</li>
+              <li>Arduino</li>
+            </ul>
+          </div>
+
+          <div class="skill-box">
+            <h3><i class="fa-solid fa-users"></i> Soft skills</h3>
+            <ul class="tags">
+              <li>Trabalho em equipe</li>
+              <li>Liderança de grupo</li>
+              <li>Comunicação</li>
+              <li>Vontade de aprender</li>
+              <li>Organização</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJETOS ===== -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <h2 class="section-title"><span class="green">03.</span> Projetos</h2>
+        <p class="section-desc">Alguns projetos que fiz na faculdade e nos estudos.</p>
+
+        <div class="filters">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="dados">Dados & IA</button>
+          <button class="filter-btn" data-filter="jogos">Jogos</button>
+          <button class="filter-btn" data-filter="outros">Outros</button>
+        </div>
+
+        <!-- os cards sao criados pelo js/script.js (lista "projetos") -->
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===== FORMACAO ===== -->
+    <section class="section section-alt" id="formacao">
+      <div class="container">
+        <h2 class="section-title"><span class="green">04.</span> Formação</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-date">Em andamento</span>
+            <h3>Bacharelado em Ciência da Computação</h3>
+            <p class="timeline-place">Centro Universitário Sagrado Coração - UNISAGRADO</p>
+            <p>
+              Disciplinas que mais gostei: IA Generativa, Redes e Sistemas Distribuídos,
+              Desenvolvimento de Jogos Digitais e Programação.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-date">Em andamento</span>
+            <h3>Python Impressionador</h3>
+            <p class="timeline-place">Hashtag Treinamentos</p>
+            <p>Python do básico ao avançado, automações e análise de dados com Pandas.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-date">Em andamento</span>
+            <h3>Construa seu primeiro app com IA</h3>
+            <p class="timeline-place">DIO - Santander</p>
+            <p>Criação de aplicações usando modelos de IA generativa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICADOS ===== -->
+    <section class="section" id="certificados">
+      <div class="container">
+        <h2 class="section-title"><span class="green">05.</span> Certificados</h2>
+        <p class="section-desc">Cursos e certificados que concluí ou estou fazendo.</p>
+
+        <!-- os cards sao criados pelo js/script.js (lista "certificados") -->
+        <div class="certs-grid" id="certs-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section class="section section-alt" id="contato">
+      <div class="container contact">
+        <h2 class="section-title center"><span class="green">06.</span> Contato</h2>
+        <p class="contact-text">
+          Estou procurando minha primeira oportunidade de estágio ou vaga júnior
+          na área de dados e IA. Se quiser conversar, é só me chamar!
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:heitorlupino@gmail.com" class="contact-card">
+            <i class="fa-solid fa-envelope"></i>
+            <span>heitorlupino@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/heitorlupino" target="_blank" class="contact-card" id="linkedin-link">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/heitorlupino" target="_blank" class="contact-card">
+            <i class="fa-brands fa-github"></i>
+            <span>github.com/heitorlupino</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Feito por Heitor Lupino &copy; <span id="ano"></span></p>
+  </footer>
+
+  <!-- modal pra ver o certificado -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Fechar">&times;</button>
+      <img src="" alt="Certificado" id="modal-img">
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
