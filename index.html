@@ -43,19 +43,93 @@
 
     <!-- ===== INICIO ===== -->
     <section class="hero" id="inicio">
-      <div class="container hero-content">
-        <p class="hero-prompt"><span class="green">heitor@portfolio</span>:<span class="blue">~</span>$ whoami</p>
-        <h1 class="hero-title">Olá, eu sou<br><span class="green" id="typing"></span><span class="cursor">_</span></h1>
-        <p class="hero-subtitle">
-          Estudante de Ciência da Computação no UNISAGRADO, estudando
-          <strong>Python</strong>, <strong>Análise de Dados</strong> e <strong>Inteligência Artificial</strong>.
-          Em busca da minha primeira oportunidade na área.
-        </p>
-        <div class="hero-buttons">
-          <a href="#projetos" class="btn btn-primary">Ver projetos</a>
-          <a href="https://github.com/heitorlupino" target="_blank" class="btn btn-outline">
-            <i class="fa-brands fa-github"></i> GitHub
-          </a>
+      <!-- bolinhas de luz no fundo -->
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="status-badge"><span class="status-dot"></span> Disponível para estágio</span>
+
+          <p class="hero-prompt"><span class="green">heitor@portfolio</span>:<span class="blue">~</span>$ whoami</p>
+          <h1 class="hero-title">Olá, eu sou<br><span class="green" id="typing"></span><span class="cursor">_</span></h1>
+          <p class="hero-role">Dados <span class="green">&</span> IA <span class="sep">|</span> Python <span class="sep">|</span> Desenvolvimento de Jogos</p>
+          <p class="hero-subtitle">
+            Estudante de Ciência da Computação no UNISAGRADO, estudando
+            <strong>Python</strong>, <strong>Análise de Dados</strong> e <strong>Inteligência Artificial</strong>.
+            Em busca da minha primeira oportunidade na área.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projetos" class="btn btn-primary">Ver projetos <i class="fa-solid fa-arrow-down"></i></a>
+            <a href="#contato" class="btn btn-outline">Fale comigo</a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/heitorlupino" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/heitor-lupino-b580562b5" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:heitorlupino@gmail.com" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- terminal com o codigo sendo digitado (preenchido pelo script.js) -->
+        <div class="hero-side">
+          <div class="terminal hero-terminal">
+            <div class="terminal-top">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green-dot"></span>
+              <span class="terminal-name">python3</span>
+            </div>
+            <pre class="terminal-body" id="hero-code"></pre>
+          </div>
+
+          <!-- numeros (contados a partir do dados.js) -->
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-num" id="stat-projetos">0</span>
+              <span class="stat-label">projetos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" id="stat-jogos">0</span>
+              <span class="stat-label">jogos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" id="stat-certs">0</span>
+              <span class="stat-label">cursos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- faixa de tecnologias passando -->
+      <div class="tech-strip">
+        <div class="tech-track">
+          <span><i class="fa-brands fa-python"></i> Python</span>
+          <span><i class="fa-solid fa-table"></i> Pandas</span>
+          <span><i class="fa-solid fa-database"></i> SQL</span>
+          <span><i class="fa-solid fa-brain"></i> IA Generativa</span>
+          <span><i class="fa-brands fa-java"></i> Java</span>
+          <span><i class="fa-solid fa-hashtag"></i> C#</span>
+          <span><i class="fa-brands fa-unity"></i> Unity</span>
+          <span><i class="fa-brands fa-html5"></i> HTML</span>
+          <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+          <span><i class="fa-brands fa-js"></i> JavaScript</span>
+          <span><i class="fa-brands fa-figma"></i> Figma</span>
+          <span><i class="fa-brands fa-git-alt"></i> Git</span>
+          <!-- repetido pra animacao ficar continua -->
+          <span><i class="fa-brands fa-python"></i> Python</span>
+          <span><i class="fa-solid fa-table"></i> Pandas</span>
+          <span><i class="fa-solid fa-database"></i> SQL</span>
+          <span><i class="fa-solid fa-brain"></i> IA Generativa</span>
+          <span><i class="fa-brands fa-java"></i> Java</span>
+          <span><i class="fa-solid fa-hashtag"></i> C#</span>
+          <span><i class="fa-brands fa-unity"></i> Unity</span>
+          <span><i class="fa-brands fa-html5"></i> HTML</span>
+          <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+          <span><i class="fa-brands fa-js"></i> JavaScript</span>
+          <span><i class="fa-brands fa-figma"></i> Figma</span>
+          <span><i class="fa-brands fa-git-alt"></i> Git</span>
         </div>
       </div>
     </section>

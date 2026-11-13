@@ -119,6 +119,58 @@ digitar();
 
 
 // ==========================================
+// CODIGO DIGITANDO NO TERMINAL DO INICIO
+// ==========================================
+const linhasCodigo = [
+  '<span class="purple">&gt;&gt;&gt;</span> from heitor import Estudante',
+  '<span class="purple">&gt;&gt;&gt;</span> eu = Estudante()',
+  '<span class="purple">&gt;&gt;&gt;</span> eu.curso',
+  '<span class="green">\'Ciência da Computação - UNISAGRADO\'</span>',
+  '<span class="purple">&gt;&gt;&gt;</span> eu.estudando',
+  '[<span class="green">\'Python\'</span>, <span class="green">\'Pandas\'</span>, <span class="green">\'SQL\'</span>, <span class="green">\'IA Generativa\'</span>]',
+  '<span class="purple">&gt;&gt;&gt;</span> eu.procurando_estagio()',
+  '<span class="blue">True</span>  <span class="text-light"># bora conversar!</span>'
+];
+
+const heroCode = document.getElementById("hero-code");
+let linhaAtual = 0;
+
+function mostrarLinha() {
+  if (linhaAtual < linhasCodigo.length) {
+    heroCode.innerHTML += linhasCodigo[linhaAtual] + "\n";
+    linhaAtual++;
+    setTimeout(mostrarLinha, 450);
+  }
+}
+
+setTimeout(mostrarLinha, 1800); // espera o nome terminar de digitar
+
+
+// ==========================================
+// NUMEROS DO INICIO (contando ate o valor)
+// ==========================================
+function contar(id, valorFinal) {
+  const el = document.getElementById(id);
+  let n = 0;
+  const intervalo = setInterval(function () {
+    n++;
+    el.textContent = n;
+    if (n >= valorFinal) {
+      clearInterval(intervalo);
+    }
+  }, 120);
+}
+
+const totalJogos = projetos.filter(function (p) {
+  return p.categoria === "jogos";
+}).length;
+
+contar("stat-projetos", projetos.length);
+contar("stat-jogos", totalJogos);
+contar("stat-certs", certificados.length);
+
+
+// ==========================================
 // MENU NO CELULAR
 // ==========================================
 const menuBtn = document.getElementById("menu-btn");
