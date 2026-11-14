@@ -120,13 +120,25 @@ function montarVideo() {
     }
     player = `<iframe src="https://www.youtube.com/embed/${codigo}" title="Vídeo do projeto" allowfullscreen></iframe>`;
   } else {
-    player = `<video src="${projeto.video}" controls></video>`;
+    player = `<video src="${projeto.video}" controls preload="metadata"></video>`;
+  }
+
+  // video de celular (em pé) fica mais estreito
+  let classeVideo = "video-box";
+  if (projeto.videoVertical) {
+    classeVideo = "video-box video-vertical";
+  }
+
+  let legenda = "";
+  if (projeto.videoLegenda) {
+    legenda = `<p class="video-legenda">${projeto.videoLegenda}</p>`;
   }
 
   return `
     <section class="project-section">
       <h2 class="section-title"><span class="green">#</span> Vídeo</h2>
-      <div class="video-box">${player}</div>
+      <div class="${classeVideo}">${player}</div>
+      ${legenda}
     </section>
   `;
 }

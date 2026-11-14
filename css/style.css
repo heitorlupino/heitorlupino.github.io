@@ -774,6 +774,18 @@ img {
   border: none;
 }
 
+/* video gravado no celular (em pé) */
+.video-box.video-vertical {
+  aspect-ratio: 540 / 1112;
+  max-width: 340px;
+}
+
+.video-legenda {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
 /* post do linkedin é mais alto que um video normal */
 .video-box.linkedin-box {
   aspect-ratio: auto;

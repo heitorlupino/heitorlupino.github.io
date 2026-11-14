@@ -214,7 +214,9 @@ const projetos = [
       "assets/projetos/jornada-do-bem/como-jogar2.jpg",
       "assets/projetos/jornada-do-bem/como-jogar3.jpg"
     ],
-    video: ""
+    video: "assets/projetos/jornada-do-bem/jogo3-coleta-lixo.mp4",
+    videoVertical: true,
+    videoLegenda: "Minijogo 3 - Coleta de Lixo: o jogador recolhe os resíduos pedidos antes do tempo acabar"
   },
   {
     id: "reciclei",
