@@ -159,6 +159,8 @@ img {
 
 .menu-btn {
   display: none;
+  width: 38px;
+  height: 38px;
   background: none;
   border: none;
   color: var(--white);
@@ -1376,14 +1378,8 @@ img {
 /* =========================
    RESPONSIVO
    ========================= */
-@media (max-width: 860px) {
-  .about,
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
+/* menu vira "hamburguer" em telas menores (tem muitos links) */
+@media (max-width: 1080px) {
   .menu-btn {
     display: block;
   }
@@ -1409,7 +1405,16 @@ img {
     padding: 14px 0;
     border-top: 1px solid var(--border);
   }
+}
 
+@media (max-width: 860px) {
+  .about,
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
   .hero-title {
     font-size: 2.2rem;
   }
