@@ -120,7 +120,12 @@ function montarVideo() {
     }
     player = `<iframe src="https://www.youtube.com/embed/${codigo}" title="Vídeo do projeto" allowfullscreen></iframe>`;
   } else {
-    player = `<video src="${projeto.video}" controls preload="metadata"></video>`;
+    // capa do video (opcional)
+    let capa = "";
+    if (projeto.videoCapa) {
+      capa = `poster="${projeto.videoCapa}"`;
+    }
+    player = `<video src="${projeto.video}" ${capa} controls preload="metadata"></video>`;
   }
 
   // video de celular (em pé) fica mais estreito

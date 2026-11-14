@@ -263,7 +263,7 @@ const projetos = [
       "5 cenas: menu, hub do museu e uma cena para cada era",
       "Portais no hub que levam aos ambientes temáticos",
       "Interação com artefatos (tecla E) abrindo um painel com título e descrição, que fecha com F ou sozinho depois de um tempo",
-      "Sistema de narração com áudio e legendas",
+      "Sistema de narração com áudio e legendas, com um guia para cada era: Uruk na Pré-História, Sir Aldric na Idade Média e ARIA no Futuro",
       "Sistema de progresso que libera a saída quando todos os artefatos da era são explorados",
       "Suporte a VR com XR Interaction Toolkit e também a teclado e mouse",
       "Ferramentas no editor para montar as cenas, criar os prefabs e validar o projeto automaticamente",
@@ -278,8 +278,19 @@ const projetos = [
     tecnologias: ["Unity", "C#", "XR Interaction Toolkit", "TextMeshPro", "URP"],
     github: "https://github.com/heitorlupino/ChronoMundi",
     link: "",
-    imagens: [],
-    video: ""
+    imagens: [
+      "assets/projetos/chronomundi/cena1.jpg",
+      "assets/projetos/chronomundi/cena2.jpg",
+      "assets/projetos/chronomundi/cena3.jpg",
+      "assets/projetos/chronomundi/cena8.jpg",
+      "assets/projetos/chronomundi/cena4.jpg",
+      "assets/projetos/chronomundi/cena5.jpg",
+      "assets/projetos/chronomundi/cena6.jpg",
+      "assets/projetos/chronomundi/cena7.jpg"
+    ],
+    video: "assets/projetos/chronomundi/chronomundi-demo.mp4",
+    videoCapa: "assets/projetos/chronomundi/cena1.jpg",
+    videoLegenda: "Demonstração completa do ChronoMundi: menu, hub do museu e as três eras"
   },
   {
     id: "protocolo-omega",
