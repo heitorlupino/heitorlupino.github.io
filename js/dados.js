@@ -233,7 +233,8 @@ const projetos = [
     comoFoiFeito: [
       "Definição do tema (descarte correto de resíduos) e das regras do jogo",
       "Criação das telas de menu, tutorial e créditos",
-      "Mecânica de separar cada resíduo na lixeira da cor certa",
+      "Programação da mecânica em C#: separar cada resíduo na lixeira da cor certa",
+      "Participação na concepção, no desenvolvimento e nos testes do jogo",
       "Testes com o grupo e com os professores",
       "Apresentação do jogo no projeto de extensão"
     ],
@@ -241,7 +242,7 @@ const projetos = [
       "Jogo completo e jogável apresentado na Fábrica de Software",
       "Feito na Fábrica de Software de 2024 (35 horas, com certificado)"
     ],
-    tecnologias: ["Serious Games", "Game Design", "Trabalho em equipe"],
+    tecnologias: ["C#", "Serious Games", "Game Design", "Trabalho em equipe"],
     github: "",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7214701438134857729/",
     imagens: [],
@@ -482,6 +483,22 @@ const certificados = [
     instituicao: "DIO - Bradesco",
     data: "Junho de 2026 - 2 horas",
     imagem: "assets/certificados/fundamentos-ia-moderna.jpg",
+    pdf: ""
+  },
+  {
+    nome: "Git e GitHub (Trilha Backend)",
+    categoria: "cursos",
+    instituicao: "FDevs 2K26 - Upper",
+    data: "Junho de 2026 - 4 horas",
+    imagem: "assets/certificados/fdevs-git-github-2026.jpg",
+    pdf: ""
+  },
+  {
+    nome: "Lógica de Programação (Trilha Backend)",
+    categoria: "cursos",
+    instituicao: "FDevs 2K26 - Upper",
+    data: "Junho de 2026 - 7h30",
+    imagem: "assets/certificados/fdevs-logica-programacao-2026.jpg",
     pdf: ""
   },
   {
