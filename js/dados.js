@@ -76,13 +76,13 @@ const projetos = [
   {
     id: "rag-python",
     titulo: "Assistente com RAG em Python",
-    tipo: "Exercícios de aula - IA",
+    tipo: "Aula prática - Prof. Victor",
     categoria: "dados",
     status: "",
-    resumo: "Sequência de 6 exercícios que monta, passo a passo, um assistente que responde perguntas com base em documentos de uma empresa.",
+    resumo: "Sequência de 6 exercícios feitos em sala de aula com o professor Victor, montando passo a passo um assistente que responde com base em documentos.",
     descricao: [
-      "RAG (Retrieval-Augmented Generation) é a técnica usada para fazer um modelo de linguagem responder com base em documentos específicos, em vez de inventar respostas. Nesses exercícios de aula eu construí essa técnica do zero, uma etapa por vez.",
-      "Por que isso é útil? Empresas têm regulamentos, manuais e políticas que um chatbot comum não conhece. Com RAG, o assistente busca o trecho certo do documento e usa esse trecho para responder. Para testar, usei o regulamento interno de RH de uma empresa fictícia.",
+      "RAG (Retrieval-Augmented Generation) é a técnica usada para fazer um modelo de linguagem responder com base em documentos específicos, em vez de inventar respostas. Esses exercícios foram desenvolvidos em sala de aula pelo professor Victor, e a turma acompanhou a construção da técnica uma etapa por vez.",
+      "Por que isso é útil? Empresas têm regulamentos, manuais e políticas que um chatbot comum não conhece. Com RAG, o assistente busca o trecho certo do documento e usa esse trecho para responder. Para testar, foi usado o regulamento interno de RH de uma empresa fictícia.",
       "No último exercício, as etapas se juntam em um assistente completo: ele lê o documento, divide em partes, transforma em vetores, encontra o trecho mais parecido com a pergunta e manda para o LLM gerar a resposta."
     ],
     comoFoiFeito: [
@@ -96,7 +96,7 @@ const projetos = [
     ],
     resultados: [
       "Assistente que responde perguntas sobre o regulamento usando só o conteúdo do documento",
-      "Entendimento prático de embeddings, busca vetorial e LLMs"
+      "Contato prático com embeddings, busca vetorial e LLMs em sala de aula"
     ],
     tecnologias: ["Python", "RAG", "Embeddings", "NumPy", "Groq / LLM"],
     github: "https://github.com/heitorlupino/ExAulaVictor_RAG",
@@ -352,36 +352,6 @@ const projetos = [
       "assets/projetos/jogo-plataforma-2d/mapa-fase1.png",
       "assets/projetos/jogo-plataforma-2d/sprites.png"
     ],
-    video: ""
-  },
-  {
-    id: "rede-codevale",
-    titulo: "Projeto de Rede - Codevale",
-    tipo: "Projeto em grupo - Redes e Sistemas Distribuídos",
-    categoria: "outros",
-    status: "",
-    resumo: "Projeto de infraestrutura de rede para uma empresa fictícia, feito pela equipe Nexo Consultoria em Redes.",
-    descricao: [
-      "Projeto da disciplina de Redes e Sistemas Distribuídos. Nossa equipe, a Nexo Consultoria em Redes, fez o papel de uma consultoria contratada para planejar toda a infraestrutura de rede da Codevale Tecnologia Ltda., uma empresa fictícia.",
-      "Por que esse formato? Simular uma consultoria obriga a pensar como no mercado: entender o que o cliente precisa, propor uma solução que caiba no orçamento e explicar as escolhas de forma clara, inclusive para quem não é técnico.",
-      "Na mesma disciplina, usamos os dados do projeto para criar uma campanha educativa nas redes sociais sobre segurança em redes."
-    ],
-    comoFoiFeito: [
-      "Levantamento das necessidades da empresa e dos setores",
-      "Planejamento da topologia e dos equipamentos da rede",
-      "Definição das medidas de segurança da rede",
-      "Documentação completa do projeto para o cliente",
-      "Campanha educativa com publicações sobre segurança em redes",
-      "Apresentação do projeto para a turma, adaptando a linguagem para um público menos técnico"
-    ],
-    resultados: [
-      "Projeto de infraestrutura entregue e apresentado",
-      "Campanha educativa sobre segurança em redes criada com os dados do projeto"
-    ],
-    tecnologias: ["Redes", "Infraestrutura", "Segurança", "Documentação"],
-    github: "",
-    link: "",
-    imagens: [],
     video: ""
   },
   {

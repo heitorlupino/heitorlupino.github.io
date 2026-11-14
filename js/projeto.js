@@ -83,10 +83,7 @@ function mostrarProjeto() {
 
     ${montarResultados()}
 
-    <section class="project-section">
-      <h2 class="section-title"><span class="green">#</span> Imagens</h2>
-      ${montarGaleria()}
-    </section>
+    ${montarGaleria()}
   `;
 
   ativarGaleria();
@@ -156,8 +153,9 @@ function montarResultados() {
 
 
 function montarGaleria() {
+  // sem imagens a seção nem aparece
   if (projeto.imagens.length === 0) {
-    return `<p class="empty">Imagens em breve.</p>`;
+    return "";
   }
 
   let imgs = "";
@@ -165,7 +163,12 @@ function montarGaleria() {
     imgs += `<img src="${img}" alt="${projeto.titulo}" class="gallery-img">`;
   });
 
-  return `<div class="gallery">${imgs}</div>`;
+  return `
+    <section class="project-section">
+      <h2 class="section-title"><span class="green">#</span> Imagens</h2>
+      <div class="gallery">${imgs}</div>
+    </section>
+  `;
 }
 
 
