@@ -3,7 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projetos de Heitor Lupino - Python, Dados, IA e Jogos">
   <title>Projeto | Heitor Lupino</title>
+  <!-- previa do link no WhatsApp, LinkedIn etc -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Heitor Lupino">
+  <meta property="og:title" content="Projetos | Heitor Lupino">
+  <meta property="og:description" content="Estudante de Ciência da Computação no UNISAGRADO, focado em Python, Análise de Dados e IA. Veja meus projetos e certificados.">
+  <meta property="og:url" content="https://heitorlupino.github.io/projeto.html">
+  <meta property="og:image" content="https://heitorlupino.github.io/assets/img/preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0d1117">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +24,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <link rel="stylesheet" href="css/style.css?v=15">
+  <link rel="stylesheet" href="css/style.css?v=16">
+  <script src="js/tema.js?v=16"></script>
 </head>
 <body>
 
@@ -20,18 +34,24 @@
     <nav class="nav container">
       <a href="index.html" class="logo">&lt;heitor<span>.dev</span> /&gt;</a>
 
-      <button class="menu-btn" id="menu-btn" aria-label="Abrir menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html#sobre">Sobre</a></li>
         <li><a href="index.html#habilidades">Habilidades</a></li>
+        <li><a href="index.html#experiencia">Experiência</a></li>
         <li><a href="index.html#projetos" class="active">Projetos</a></li>
         <li><a href="index.html#formacao">Formação</a></li>
         <li><a href="index.html#certificados">Certificados</a></li>
         <li><a href="index.html#contato">Contato</a></li>
       </ul>
+
+      <div class="nav-right">
+        <button class="theme-btn" id="theme-btn" aria-label="Mudar tema" title="Mudar tema claro/escuro">
+          <i class="fa-solid fa-sun" id="theme-icon"></i>
+        </button>
+        <button class="menu-btn" id="menu-btn" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -60,7 +80,7 @@
     </div>
   </div>
 
-  <script src="js/dados.js?v=15"></script>
-  <script src="js/projeto.js?v=15"></script>
+  <script src="js/dados.js?v=16"></script>
+  <script src="js/projeto.js?v=16"></script>
 </body>
 </html>

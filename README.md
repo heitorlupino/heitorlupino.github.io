@@ -4,6 +4,15 @@ Meu portfolio pessoal, com informações sobre mim, projetos, formação e certi
 
 🔗 **Acesse:** https://heitorlupino.github.io
 
+## Funcionalidades
+
+- Projetos e certificados com filtros por categoria
+- Página própria para cada projeto, com galeria de imagens e vídeo
+- Seção de repositórios carregada pela **API do GitHub** (`fetch`)
+- Formulário de contato (FormSubmit)
+- Tema claro e escuro (salvo no navegador)
+- Prévia do link para WhatsApp e LinkedIn (Open Graph)
+
 ## Tecnologias
 
 - HTML

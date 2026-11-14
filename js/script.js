@@ -243,7 +243,7 @@ document.querySelectorAll(".nav-links a").forEach(function (link) {
 // ==========================================
 // ANIMACAO QUANDO ROLA A PAGINA
 // ==========================================
-const elementos = document.querySelectorAll(".section-title, .skill-box, .timeline-item, .contact-card, .about");
+const elementos = document.querySelectorAll(".section-title, .skill-box, .exp-card, .timeline-item, .contact-card, .about");
 
 elementos.forEach(function (el) {
   el.classList.add("hidden");
@@ -260,6 +260,104 @@ const observer = new IntersectionObserver(function (entries) {
 elementos.forEach(function (el) {
   observer.observe(el);
 });
+
+
+// ==========================================
+// REPOSITORIOS DO GITHUB (usando a API publica)
+// ==========================================
+const reposGrid = document.getElementById("repos-grid");
+
+// repositorios que nao quero mostrar
+const reposEscondidos = ["heitorlupino", "heitorlupino.github.io"];
+
+// descricao pros repositorios que estao sem descricao no github
+const descricoesExtras = {
+  "Estudos-Python": "Exercícios e materiais do curso Python Impressionador, organizados por módulos.",
+  "ChronoMundi": "Museu virtual em VR feito na Unity, com três eras da história para explorar.",
+  "ExAulaVictor_RAG": "Exercícios de RAG em Python feitos em aula: embeddings, busca e LLM.",
+  "DriveSpot": "Sistema web de gerenciamento de veículos em Python, Flask e MySQL.",
+  "Missao-Solidaria": "Código do jogo Jornada do Bem, feito em Flutter e publicado na Play Store.",
+  "Exercicios_aula_Tecnologias_Programa-o_Integrada": "Exercícios da disciplina de Tecnologias de Programação Integrada.",
+  "curso-git-fdevs": "Exercícios do curso de Git e GitHub.",
+  "Loja-Virtual": "Projeto de e-commerce feito nos estudos de front-end.",
+  "html-css-js-ts-react": "Exercícios e projetos do curso de Front-end (HTML, CSS, JS, TS e React).",
+  "projeto-android": "Site sobre o Android feito no curso de HTML5 e CSS3 do Curso em Vídeo.",
+  "projeto-cordel": "Site de cordel feito no curso de HTML5 e CSS3 do Curso em Vídeo.",
+  "html-css": "Exercícios de HTML e CSS."
+};
+
+// cor de cada linguagem (as mesmas que o github usa)
+const coresLinguagem = {
+  "Python": "#3572A5",
+  "JavaScript": "#f1e05a",
+  "TypeScript": "#3178c6",
+  "Java": "#b07219",
+  "C#": "#178600",
+  "HTML": "#e34c26",
+  "CSS": "#563d7c",
+  "Dart": "#00B4AB",
+  "ShaderLab": "#222c37",
+  "Jupyter Notebook": "#DA5B0B"
+};
+
+async function carregarRepositorios() {
+  try {
+    const resposta = await fetch("https://api.github.com/users/heitorlupino/repos?sort=pushed&per_page=30");
+
+    if (!resposta.ok) {
+      throw new Error("Erro " + resposta.status);
+    }
+
+    const repos = await resposta.json();
+
+    // tira os forks e os escondidos e pega so os 6 primeiros
+    const lista = repos.filter(function (r) {
+      return !r.fork && !reposEscondidos.includes(r.name);
+    }).slice(0, 6);
+
+    reposGrid.innerHTML = "";
+
+    lista.forEach(function (repo) {
+      let descricao = repo.description;
+      if (!descricao) {
+        descricao = descricoesExtras[repo.name] || "Sem descrição.";
+      }
+
+      let linguagem = "";
+      if (repo.language) {
+        const cor = coresLinguagem[repo.language] || "#8b949e";
+        linguagem = `<span><span class="lang-dot" style="background-color: ${cor}"></span>${repo.language}</span>`;
+      }
+
+      // data no formato dd/mm/aaaa
+      const data = new Date(repo.pushed_at).toLocaleDateString("pt-BR");
+
+      reposGrid.innerHTML += `
+        <a href="${repo.html_url}" target="_blank" class="repo-card">
+          <div class="repo-top">
+            <i class="fa-regular fa-folder"></i>
+            <h3>${repo.name}</h3>
+          </div>
+          <p>${descricao}</p>
+          <div class="repo-info">
+            ${linguagem}
+            <span><i class="fa-regular fa-star"></i> ${repo.stargazers_count}</span>
+            <span><i class="fa-regular fa-clock"></i> ${data}</span>
+          </div>
+        </a>
+      `;
+    });
+  } catch (erro) {
+    // se der erro (sem internet ou limite da API) mostra um aviso
+    console.log("Erro ao carregar repositórios:", erro);
+    reposGrid.innerHTML = `
+      <p class="empty">Não foi possível carregar os repositórios agora.
+      <a href="https://github.com/heitorlupino" target="_blank" class="green">Veja direto no GitHub</a>.</p>
+    `;
+  }
+}
+
+carregarRepositorios();
 
 
 // ano do rodape

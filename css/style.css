@@ -14,6 +14,53 @@
   --purple: #bc8cff;
   --yellow: #e3b341;
   --red: #f85149;
+  --header-bg: rgba(13, 17, 23, 0.9);
+  --bar-bg: #1c2128;
+  --strip-bg: rgba(22, 27, 34, 0.8);
+  --green-soft: rgba(63, 185, 80, 0.1);
+}
+
+/* tema claro (ativado pelo botao do menu) */
+[data-theme="light"] {
+  --bg: #ffffff;
+  --bg-alt: #f6f8fa;
+  --card: #ffffff;
+  --border: #d0d7de;
+  --text: #1f2328;
+  --text-light: #59636e;
+  --white: #1f2328;
+  --green: #1a7f37;
+  --blue: #0969da;
+  --purple: #8250df;
+  --yellow: #9a6700;
+  --red: #cf222e;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --bar-bg: #eaeef2;
+  --strip-bg: rgba(246, 248, 250, 0.9);
+  --green-soft: rgba(26, 127, 55, 0.1);
+}
+
+[data-theme="light"] .glow {
+  opacity: 0.12;
+}
+
+[data-theme="light"] .hero-terminal,
+[data-theme="light"] .project-card:hover,
+[data-theme="light"] .repo-card:hover {
+  box-shadow: 0 10px 30px rgba(31, 35, 40, 0.12);
+}
+
+/* transicao suave quando troca o tema */
+body,
+.header,
+.section-alt,
+.skill-box,
+.project-card,
+.cert-card,
+.repo-card,
+.exp-card,
+.terminal {
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
 /* =========================
@@ -69,7 +116,7 @@ img {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(13, 17, 23, 0.9);
+  background-color: var(--header-bg);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--border);
   z-index: 100;
@@ -140,7 +187,7 @@ img {
 }
 
 .btn-primary:hover {
-  background-color: #2ea043;
+  filter: brightness(0.9);
 }
 
 .btn-outline {
@@ -149,7 +196,7 @@ img {
 }
 
 .btn-outline:hover {
-  background-color: rgba(63, 185, 80, 0.1);
+  background-color: var(--green-soft);
 }
 
 /* =========================
@@ -348,7 +395,7 @@ img {
   margin-top: 56px;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  background-color: rgba(22, 27, 34, 0.8);
+  background-color: var(--strip-bg);
   overflow: hidden;
   padding: 14px 0;
 }
@@ -462,7 +509,7 @@ img {
   align-items: center;
   gap: 8px;
   padding: 10px 14px;
-  background-color: #1c2128;
+  background-color: var(--bar-bg);
   border-bottom: 1px solid var(--border);
 }
 
@@ -534,7 +581,7 @@ img {
   font-size: 0.78rem;
   padding: 4px 10px;
   border-radius: 20px;
-  background-color: rgba(63, 185, 80, 0.1);
+  background-color: var(--green-soft);
   color: var(--green);
   border: 1px solid rgba(63, 185, 80, 0.3);
 }
@@ -937,7 +984,7 @@ img {
 }
 
 .cert-btn:hover {
-  background-color: rgba(63, 185, 80, 0.1);
+  background-color: var(--green-soft);
 }
 
 /* imagem pequena no card */
@@ -960,7 +1007,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1c2128;
+  background-color: var(--bar-bg);
   cursor: default;
   font-size: 2.5rem;
   color: var(--yellow);
@@ -1059,6 +1106,247 @@ img {
   transform: translateY(-3px);
 }
 
+
+/* =========================
+   MENU - BOTAO DE TEMA
+   ========================= */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--yellow);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.theme-btn:hover {
+  border-color: var(--green);
+  transform: rotate(20deg);
+}
+
+/* =========================
+   EXPERIENCIA
+   ========================= */
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.exp-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 8px;
+  padding: 24px 28px;
+}
+
+.exp-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.exp-top h3 {
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+.exp-place {
+  color: var(--purple);
+  font-size: 0.9rem;
+}
+
+.exp-date {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  color: var(--green);
+  white-space: nowrap;
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.exp-card .steps {
+  margin-bottom: 16px;
+}
+
+.exp-card .steps li {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* =========================
+   REPOSITORIOS
+   ========================= */
+.repos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.repo-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.repo-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--green);
+}
+
+.repo-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.repo-top i {
+  color: var(--green);
+}
+
+.repo-top h3 {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95rem;
+  color: var(--blue);
+  word-break: break-word;
+}
+
+.repo-card p {
+  color: var(--text-light);
+  font-size: 0.88rem;
+  flex: 1;
+}
+
+.repo-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.lang-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.center-btn {
+  text-align: center;
+  margin-top: 32px;
+}
+
+/* =========================
+   FORMULARIO DE CONTATO
+   ========================= */
+.contact-form {
+  max-width: 640px;
+  margin: 48px auto 0;
+  text-align: left;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 28px;
+}
+
+.form-title {
+  font-family: 'Fira Code', monospace;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px var(--green-soft);
+}
+
+.contact-form button {
+  border: none;
+  cursor: pointer;
+}
+
+/* pagina de obrigado */
+.thanks {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.thanks-box {
+  width: 100%;
+  max-width: 460px;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.thanks h1 {
+  color: var(--white);
+  font-family: 'Fira Code', monospace;
+}
+
+.thanks p {
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
 /* =========================
    RODAPE
    ========================= */
@@ -1149,6 +1437,19 @@ img {
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-top {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .exp-card {
+    padding: 20px;
   }
 
   .project-header h1 {

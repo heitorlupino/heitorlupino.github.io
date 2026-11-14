@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio de Heitor Lupino - Estudante de Ciência da Computação focado em Python, Análise de Dados e IA">
   <title>Heitor Lupino | Portfolio</title>
+  <!-- previa do link no WhatsApp, LinkedIn etc -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Heitor Lupino">
+  <meta property="og:title" content="Heitor Lupino | Portfolio">
+  <meta property="og:description" content="Estudante de Ciência da Computação no UNISAGRADO, focado em Python, Análise de Dados e IA. Veja meus projetos e certificados.">
+  <meta property="og:url" content="https://heitorlupino.github.io/">
+  <meta property="og:image" content="https://heitorlupino.github.io/assets/img/preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0d1117">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
   <!-- fontes -->
@@ -15,7 +27,8 @@
   <!-- icones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <link rel="stylesheet" href="css/style.css?v=15">
+  <link rel="stylesheet" href="css/style.css?v=16">
+  <script src="js/tema.js?v=16"></script>
 </head>
 <body>
 
@@ -24,18 +37,24 @@
     <nav class="nav container">
       <a href="#inicio" class="logo">&lt;heitor<span>.dev</span> /&gt;</a>
 
-      <button class="menu-btn" id="menu-btn" aria-label="Abrir menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
       <ul class="nav-links" id="nav-links">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#experiencia">Experiência</a></li>
         <li><a href="#projetos">Projetos</a></li>
         <li><a href="#formacao">Formação</a></li>
         <li><a href="#certificados">Certificados</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
+
+      <div class="nav-right">
+        <button class="theme-btn" id="theme-btn" aria-label="Mudar tema" title="Mudar tema claro/escuro">
+          <i class="fa-solid fa-sun" id="theme-icon"></i>
+        </button>
+        <button class="menu-btn" id="menu-btn" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -243,10 +262,68 @@
       </div>
     </section>
 
-    <!-- ===== PROJETOS ===== -->
-    <section class="section" id="projetos">
+    <!-- ===== EXPERIENCIA ===== -->
+    <section class="section" id="experiencia">
       <div class="container">
-        <h2 class="section-title"><span class="green">03.</span> Projetos</h2>
+        <h2 class="section-title"><span class="green">03.</span> Experiência</h2>
+        <p class="section-desc">Ainda não tive meu primeiro emprego na área, mas já participei de projetos práticos com prazo, equipe e entrega real.</p>
+
+        <div class="exp-list">
+          <div class="exp-card">
+            <div class="exp-top">
+              <div>
+                <h3>Desenvolvedor - Projeto de Extensão Fábrica de Software</h3>
+                <p class="exp-place">UNISAGRADO</p>
+              </div>
+              <span class="exp-date">2024 e 2025</span>
+            </div>
+            <ul class="steps">
+              <li>Participei de duas edições do projeto, somando 185 horas certificadas (35 h em 2024 e 150 h em 2025)</li>
+              <li>Desenvolvimento em equipe de jogos educacionais, como o <a href="projeto.html?id=reciclei" class="green">Reciclei!</a>, sobre descarte correto do lixo</li>
+              <li>Trabalho com orientação de professores, prazos e apresentação dos resultados</li>
+            </ul>
+            <div class="project-tech"><span>Game Design</span><span>Trabalho em equipe</span><span>Extensão</span></div>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-top">
+              <div>
+                <h3>Desenvolvedor Mobile - Jornada do Bem</h3>
+                <p class="exp-place">Projeto acadêmico publicado na Play Store</p>
+              </div>
+              <span class="exp-date">Mar - Jun 2025</span>
+            </div>
+            <ul class="steps">
+              <li>Desenvolvimento em equipe de 5 pessoas de um jogo educativo para Android, do design no Figma até a publicação</li>
+              <li>Programação dos minijogos em Flutter / Dart, com pontuação, fases e telas de instrução</li>
+              <li>Publicação do app na Google Play Store - <a href="projeto.html?id=jornada-do-bem" class="green">ver projeto</a></li>
+            </ul>
+            <div class="project-tech"><span>Flutter</span><span>Dart</span><span>Figma</span><span>Android</span></div>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-top">
+              <div>
+                <h3>Coordenador - Projeto Social Golpes Virtuais</h3>
+                <p class="exp-place">Clube da Terceira Idade de Barra Bonita</p>
+              </div>
+              <span class="exp-date">Ago - Nov 2026</span>
+            </div>
+            <ul class="steps">
+              <li>Coordenei um grupo de 4 alunos, dividindo tarefas e cuidando dos prazos</li>
+              <li>Fiz o contato com a instituição e organizei a ação para mais de 30 idosos</li>
+              <li>Apresentação sobre segurança digital com linguagem simples para quem não é da área - <a href="projeto.html?id=projeto-social" class="green">ver projeto</a></li>
+            </ul>
+            <div class="project-tech"><span>Liderança</span><span>Comunicação</span><span>Segurança Digital</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJETOS ===== -->
+    <section class="section section-alt" id="projetos">
+      <div class="container">
+        <h2 class="section-title"><span class="green">04.</span> Projetos</h2>
         <p class="section-desc">Alguns projetos que fiz na faculdade e nos estudos.</p>
 
         <div class="filters">
@@ -261,10 +338,32 @@
       </div>
     </section>
 
+    <!-- ===== REPOSITORIOS (API do GitHub) ===== -->
+    <section class="section" id="repositorios">
+      <div class="container">
+        <h2 class="section-title"><span class="green">05.</span> Repositórios</h2>
+        <p class="section-desc">
+          Meus repositórios atualizados mais recentemente, carregados direto da
+          <span class="green">API do GitHub</span>.
+        </p>
+
+        <!-- preenchido pelo js/script.js -->
+        <div class="repos-grid" id="repos-grid">
+          <p class="empty">Carregando repositórios...</p>
+        </div>
+
+        <div class="center-btn">
+          <a href="https://github.com/heitorlupino?tab=repositories" target="_blank" class="btn btn-outline">
+            <i class="fa-brands fa-github"></i> Ver todos no GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== FORMACAO ===== -->
     <section class="section section-alt" id="formacao">
       <div class="container">
-        <h2 class="section-title"><span class="green">04.</span> Formação</h2>
+        <h2 class="section-title"><span class="green">06.</span> Formação</h2>
 
         <div class="timeline">
           <div class="timeline-item">
@@ -304,7 +403,7 @@
     <!-- ===== CERTIFICADOS ===== -->
     <section class="section" id="certificados">
       <div class="container">
-        <h2 class="section-title"><span class="green">05.</span> Certificados</h2>
+        <h2 class="section-title"><span class="green">07.</span> Certificados</h2>
         <p class="section-desc">Cursos e certificados que concluí ou estou fazendo.</p>
 
         <div class="filters">
@@ -323,7 +422,7 @@
     <!-- ===== CONTATO ===== -->
     <section class="section section-alt" id="contato">
       <div class="container contact">
-        <h2 class="section-title center"><span class="green">06.</span> Contato</h2>
+        <h2 class="section-title center"><span class="green">08.</span> Contato</h2>
         <p class="contact-text">
           Estou procurando minha primeira oportunidade de estágio ou vaga júnior
           na área de dados e IA. Se quiser conversar, é só me chamar!
@@ -343,6 +442,37 @@
             <span>github.com/heitorlupino</span>
           </a>
         </div>
+
+        <!-- formulario: as mensagens chegam no meu e-mail pelo FormSubmit -->
+        <form class="contact-form" action="https://formsubmit.co/heitorlupino@gmail.com" method="POST">
+          <p class="form-title"><span class="green">&gt;</span> ou me mande uma mensagem por aqui</p>
+
+          <input type="hidden" name="_subject" value="Nova mensagem pelo portfolio!">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://heitorlupino.github.io/obrigado.html">
+          <!-- campo escondido contra spam (bots preenchem, pessoas nao) -->
+          <input type="text" name="_honey" style="display: none">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-paper-plane"></i> Enviar mensagem
+          </button>
+        </form>
       </div>
     </section>
 
@@ -363,7 +493,7 @@
     </div>
   </div>
 
-  <script src="js/dados.js?v=15"></script>
-  <script src="js/script.js?v=15"></script>
+  <script src="js/dados.js?v=16"></script>
+  <script src="js/script.js?v=16"></script>
 </body>
 </html>
