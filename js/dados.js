@@ -280,7 +280,7 @@ const projetos = [
     link: "",
     imagens: [
       "assets/projetos/chronomundi/cena1.jpg",
-      "assets/projetos/chronomundi/capa-video.jpg",
+      "assets/projetos/chronomundi/cena2.jpg",
       "assets/projetos/chronomundi/cena3.jpg",
       "assets/projetos/chronomundi/cena8.jpg",
       "assets/projetos/chronomundi/cena4.jpg",
@@ -290,7 +290,7 @@ const projetos = [
     ],
     video: "assets/projetos/chronomundi/chronomundi-demo.mp4",
     videoCapa: "assets/projetos/chronomundi/capa-video.jpg",
-    videoLegenda: "Demonstração do ChronoMundi: hub do museu com os portais e a exploração das três eras"
+    videoLegenda: "Demonstração do ChronoMundi: tela inicial, hub do museu com os portais e a exploração das três eras"
   },
   {
     id: "protocolo-omega",
