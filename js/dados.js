@@ -281,34 +281,48 @@ const projetos = [
   },
   {
     id: "protocolo-omega",
-    titulo: "Protocolo Omega",
-    tipo: "Projeto acadêmico - Jogo FPS",
+    titulo: "Protocolo Ômega",
+    tipo: "Projeto em grupo - Computação Gráfica",
     categoria: "jogos",
     status: "",
-    resumo: "Jogo de tiro em primeira pessoa feito na Unreal Engine 5, com armas, inimigos com IA e animações, tudo em Blueprints.",
+    resumo: "FPS de ação e infiltração sci-fi na Unreal Engine 5: o agente AXIS-7 precisa desativar robôs controlados por uma IA hostil.",
     descricao: [
-      "Protocolo Omega é um jogo de tiro em primeira pessoa (FPS) desenvolvido na Unreal Engine 5 como projeto da faculdade. Toda a lógica foi feita com Blueprints, o sistema de programação visual da Unreal.",
-      "Por que esse projeto? Foi meu primeiro contato sério com a Unreal Engine, depois de já ter trabalhado com Unity. Um FPS envolve muitos sistemas conversando entre si (armas, vida, inimigos e animação), o que é ótimo para aprender a organizar um jogo maior.",
-      "Um dos maiores desafios foi a animação do personagem: usamos um esqueleto militar personalizado e foi preciso resolver problemas de locomoção, posição das armas e câmera."
+      "Protocolo Ômega é um jogo de tiro em primeira pessoa (FPS) de ação e infiltração com tema de ficção científica, feito na Unreal Engine 5 para a disciplina de Computação Gráfica, em um grupo de 5 alunos. Toda a lógica foi feita com Blueprints, a programação visual da Unreal, para PC (Windows).",
+      "A história: o jogador é AXIS-7, um agente enviado ao Complexo Fênix, uma instalação científica subterrânea. Uma IA hostil tomou o controle dos robôs do lugar, os Ômegas, e a missão é derrotá-los e chegar ao núcleo de pesquisa.",
+      "O foco da disciplina era aplicar técnicas de computação gráfica em sistemas de jogo de verdade: disparo com efeitos visuais, interface, materiais dinâmicos para trocar a roupa do personagem, troca de câmera, itens coletáveis e, como bônus, inimigos controlados por inteligência artificial."
     ],
     comoFoiFeito: [
-      "Sistema de tiro e recarga das armas",
-      "Sistema de vida e morte do jogador",
-      "Troca de armas usando um enum (E_WeaponType)",
-      "Inimigos com inteligência artificial usando Behavior Trees",
-      "Modelos de arma separados para primeira e terceira pessoa, mostrando só o certo em cada câmera",
-      "Correção da arma que aparecia na cabeça do personagem (socket errado no esqueleto)",
-      "Animation Blueprint com State Machine e estado de corrida (Run)",
-      "Guia em Blueprints documentando os sistemas para o grupo"
+      "Disparo por Hit Scan (Line Trace): um raio sai da câmera e testa a colisão na hora, sem projétil físico, como nos FPS comerciais",
+      "Animação de tiro com Play Montage e muzzle flash (efeito do cano da arma) ligado por 0,1 segundo",
+      "Detecção de impacto com Break Hit Result, dano com Apply Damage, faísca do impacto com Niagara e marca de bala na parede com Decal",
+      "Efeitos e sons diferentes para cada tipo de superfície atingida (inimigo ou concreto)",
+      "HUD com UMG: objetivo da missão, barra de vida atualizada por Event Dispatcher e vinheta vermelha ao levar dano",
+      "Tela de Game Over com opções de RESPAWN e MAIN MENU",
+      "Troca da cor da jaqueta do personagem em tempo real (vermelho, azul, verde e preto) usando Dynamic Material Instance",
+      "Troca de câmera entre terceira pessoa (Spring Arm) e primeira pessoa com a tecla V, e mira (ADS) com o botão direito, mudando o FOV de 90° para 65° com Timeline",
+      "5 medkits espalhados pelo mapa (+50 de vida), girando no lugar, com som ao coletar e removidos depois do uso",
+      "Bônus: robôs Security Bot com Behavior Tree em 4 estados (parado, patrulha, perseguição e ataque), Blackboard, AI Perception e NavMesh"
     ],
     resultados: [
-      "FPS jogável com armas, inimigos com IA e animações",
-      "Experiência com Blueprints, Behavior Trees e Animation Blueprints"
+      "FPS jogável com 5 sistemas completos e inimigos com IA",
+      "4 skins do personagem trocadas durante o jogo",
+      "Robôs com 100 de vida que patrulham, perseguem e atiram no jogador",
+      "Projeto apresentado em grupo para a disciplina de Computação Gráfica"
     ],
-    tecnologias: ["Unreal Engine 5", "Blueprints", "Behavior Tree", "Animation Blueprint"],
+    tecnologias: ["Unreal Engine 5", "Blueprints", "Niagara", "UMG", "Behavior Tree"],
     github: "",
     link: "",
-    imagens: [],
+    imagens: [
+      "assets/projetos/protocolo-omega/tiro.jpg",
+      "assets/projetos/protocolo-omega/terceira-pessoa.jpg",
+      "assets/projetos/protocolo-omega/primeira-pessoa.jpg",
+      "assets/projetos/protocolo-omega/hud-skins.jpg",
+      "assets/projetos/protocolo-omega/robos-ia.jpg",
+      "assets/projetos/protocolo-omega/medkit.jpg",
+      "assets/projetos/protocolo-omega/game-over.jpg",
+      "assets/projetos/protocolo-omega/skins.jpg",
+      "assets/projetos/protocolo-omega/blueprint-disparo.jpg"
+    ],
     video: ""
   },
   {
