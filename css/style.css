@@ -22,38 +22,82 @@
 
 /* tema claro (ativado pelo botao do menu) */
 [data-theme="light"] {
-  --bg: #ffffff;
-  --bg-alt: #f6f8fa;
+  --bg: #f4f6f9;
+  --bg-alt: #e9eef4;
   --card: #ffffff;
-  --border: #d0d7de;
-  --text: #1f2328;
-  --text-light: #59636e;
-  --white: #1f2328;
-  --green: #1a7f37;
-  --blue: #0969da;
-  --purple: #8250df;
-  --yellow: #9a6700;
+  --border: #d5dce5;
+  --text: #24292f;
+  --text-light: #4d5866;
+  --white: #111827;
+  --green: #11712f;
+  --blue: #0550ae;
+  --purple: #6534c2;
+  --yellow: #8a5a00;
   --red: #cf222e;
-  --header-bg: rgba(255, 255, 255, 0.9);
-  --bar-bg: #eaeef2;
-  --strip-bg: rgba(246, 248, 250, 0.9);
-  --green-soft: rgba(26, 127, 55, 0.1);
+  --header-bg: rgba(255, 255, 255, 0.92);
+  --bar-bg: #eef2f6;
+  --strip-bg: rgba(255, 255, 255, 0.85);
+  --green-soft: rgba(17, 113, 47, 0.08);
 }
 
 [data-theme="light"] .hero {
   background-image:
-    linear-gradient(rgba(208, 215, 222, 0.35) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(208, 215, 222, 0.35) 1px, transparent 1px);
+    linear-gradient(rgba(180, 192, 207, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180, 192, 207, 0.22) 1px, transparent 1px);
 }
 
 [data-theme="light"] .glow {
-  opacity: 0.12;
+  opacity: 0.08;
+}
+
+/* no tema claro os terminais continuam escuros, fica mais facil de ler o codigo */
+[data-theme="light"] .terminal {
+  --card: #161b22;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --text-light: #8b949e;
+  --white: #f0f6fc;
+  --green: #3fb950;
+  --blue: #58a6ff;
+  --purple: #bc8cff;
+  --yellow: #e3b341;
+  --bar-bg: #1c2128;
+  color: var(--text);
+  border-color: #30363d;
+}
+
+/* cards com sombra leve pra se destacar do fundo */
+[data-theme="light"] .stat,
+[data-theme="light"] .skill-box,
+[data-theme="light"] .project-card,
+[data-theme="light"] .cert-card,
+[data-theme="light"] .repo-card,
+[data-theme="light"] .exp-card,
+[data-theme="light"] .contact-card,
+[data-theme="light"] .contact-form {
+  box-shadow: 0 1px 3px rgba(17, 24, 39, 0.06), 0 4px 14px rgba(17, 24, 39, 0.05);
 }
 
 [data-theme="light"] .hero-terminal,
 [data-theme="light"] .project-card:hover,
-[data-theme="light"] .repo-card:hover {
-  box-shadow: 0 10px 30px rgba(31, 35, 40, 0.12);
+[data-theme="light"] .cert-card:hover,
+[data-theme="light"] .repo-card:hover,
+[data-theme="light"] .skill-box:hover {
+  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.14);
+}
+
+[data-theme="light"] .header {
+  box-shadow: 0 1px 8px rgba(17, 24, 39, 0.06);
+}
+
+[data-theme="light"] .tags li {
+  border-color: rgba(17, 113, 47, 0.25);
+  font-weight: 500;
+}
+
+[data-theme="light"] .badge {
+  background-color: #fff4d6;
+  border: 1px solid #e9c46a;
 }
 
 /* transicao suave quando troca o tema */
