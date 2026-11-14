@@ -40,6 +40,12 @@
   --green-soft: rgba(26, 127, 55, 0.1);
 }
 
+[data-theme="light"] .hero {
+  background-image:
+    linear-gradient(rgba(208, 215, 222, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(208, 215, 222, 0.35) 1px, transparent 1px);
+}
+
 [data-theme="light"] .glow {
   opacity: 0.12;
 }
