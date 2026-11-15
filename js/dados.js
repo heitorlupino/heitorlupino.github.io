@@ -374,7 +374,7 @@ const projetos = [
       "Funciona com teclado e com controle"
     ],
     tecnologias: ["Unity 6", "C#", "Física 2D", "Pixel Art"],
-    github: "",
+    github: "https://github.com/heitorlupino/a-aventura-de-pip",
     link: "",
     imagens: [
       "assets/projetos/jogo-plataforma-2d/imagem1.png",
